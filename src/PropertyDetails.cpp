@@ -2,6 +2,8 @@
 #include <iostream>
 using namespace std;
 
+//defining functions
+
 void PropertyDetails::setPropertyID() {
     cout << "\nEnter the ID :";
     cin >> PropertyID;
