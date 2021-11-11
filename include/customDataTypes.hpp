@@ -36,7 +36,19 @@ struct bankAccount {
     string accountNumber;
     string ifsc;
 };
-
+enum type {
+    Directed = 0,
+    Contracted = 1,
+};
+struct dateOfJoining {
+    int month;
+    int day;
+    int year;
+};
+enum category{
+    partTime=0,
+    fullTime=1,
+};
 // functions for input and output of structs and enums
 address setAddress();
 void getAddress(address address);
@@ -48,7 +60,12 @@ gender setGender();
 void getGender(gender gender);
 bankAccount setBankAccount();
 void getBankAccount(bankAccount bankAccount);
-
+type setType();
+void getType(type type);
+dateOfJoining setdateOfJoining();
+void getdateOfJoining(dateOfJoining dateOfJoining);
+category setCategory();
+void getCategory(category category);
 // Functions to get current date and time
 date getCurrentDate();
 timeM getCurrentTime();

@@ -122,3 +122,73 @@ timeM getCurrentTime() {
     timeM.second = ltm->tm_sec;
     return timeM;
 }
+// Function to take input for type
+type setType() {
+    type type;
+    char temp;
+    bool valid = false;
+    while (!valid) {
+        cout << "Enter type (Directed-D, Contracted-C): ";
+        cin >> temp;
+        switch (temp) {
+        case 'D':
+            type = Directed;
+            valid = true;
+            break;
+        case 'M':
+            type = Contracted;
+            valid = true;
+            break;
+        default:
+            cout << "Enter a valid choice" << endl;
+        }
+    }
+    return type;
+}
+// Function to print type
+void getType(type type) {
+    cout << "Type:" << type << endl;
+}
+// Function to take input for dateOfJoining
+dateOfJoining setdateOfJoining() {
+    dateOfJoining dateOfJoining;
+    cout << "Enter date:" << endl;
+    cout << "Enter the day: ";
+    cin >> dateOfJoining.day;
+    cout << "Enter the month: ";
+    cin >> dateOfJoining.month;
+    cout << "Enter the year: ";
+    cin >> dateOfJoining.year;
+    return dateOfJoining;
+}
+// Function to print dateOfJoining
+void getdateOfJoining(dateOfJoining dateOfJoining) {
+    cout << "Date: " << dateOfJoining.day << "/" << dateOfJoining.month << "/" << dateOfJoining.year << endl;
+}
+// Function to take input for Category
+category setCategory() {
+    category category;
+    char temp;
+    bool valid = false;
+    while (!valid) {
+        cout << "Enter type (Full-Time-F, Part-Time-P): ";
+        cin >> temp;
+        switch (temp) {
+        case 'P':
+            category = fullTime;
+            valid = true;
+            break;
+        case 'F':
+            category = partTime;
+            valid = true;
+            break;
+        default:
+            cout << "Enter a valid choice" << endl;
+        }
+    }
+    return category;
+}
+// Function to print category
+void getCatefory(category category) {
+    cout << "Category:" << category << endl;
+}
