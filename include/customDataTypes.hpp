@@ -49,4 +49,8 @@ void getGender(gender gender);
 bankAccount setBankAccount();
 void getBankAccount(bankAccount bankAccount);
 
+// Functions to get current date and time
+date getCurrentDate();
+timeM getCurrentTime();
+
 #endif // CUSTOMDATATYPES_HPP

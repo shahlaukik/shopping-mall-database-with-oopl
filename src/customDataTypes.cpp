@@ -1,5 +1,6 @@
 #include "../include/customDataTypes.hpp"
 #include <iostream>
+#include <ctime>
 using namespace std;
 
 // Function to take input for address
@@ -99,4 +100,25 @@ void getBankAccount(bankAccount bankAccount) {
     cout << "Bank Name: " << bankAccount.bankName << endl;
     cout << "Account Number: " << bankAccount.accountNumber << endl;
     cout << "IFSC: " << bankAccount.ifsc << endl;
+}
+
+// Function to get current date
+date getCurrentDate() {
+    date date;
+    time_t now = time(0);
+    tm *ltm = localtime(&now);
+    date.day = ltm->tm_mday;
+    date.month = ltm->tm_mon + 1;
+    date.year = ltm->tm_year + 1900;
+    return date;
+}
+// Function to get current time
+timeM getCurrentTime() {
+    timeM timeM;
+    time_t now = time(0);
+    tm *ltm = localtime(&now);
+    timeM.hour = ltm->tm_hour;
+    timeM.minute = ltm->tm_min;
+    timeM.second = ltm->tm_sec;
+    return timeM;
 }
