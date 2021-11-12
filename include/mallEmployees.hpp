@@ -1,6 +1,6 @@
+#pragma once
 #ifndef MALLEMPLOYEES_H
 #define MALLEMPLOYEES_H
-#pragma once
 #include "./customDataTypes.hpp"
 
 #include "string"
@@ -8,7 +8,7 @@
 class mallEmployees : public employee {
     protected:
     enum category { partTime,
-                    fullTime };
+                    fullTime } empCategory;
     struct bankAccount salaryAccount;
     string UAN;
     float salary;
@@ -23,5 +23,6 @@ class mallEmployees : public employee {
     void getEmployeeSalary();
     void getBankDetails();
     bool paysalary();
+    void setmallEMployee();
 };
 #endif

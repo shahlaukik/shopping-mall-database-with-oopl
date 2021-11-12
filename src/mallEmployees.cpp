@@ -19,6 +19,7 @@ void mallEmployees::setCategory() {
     cout << "1. Part Time\n2. Full time\n";
     cout << "Choose: ";
     cin >> temp;
+    (temp == 1) ? (empCategory = partTime) : (empCategory = fullTime);
 }
 
 //Function to take Bank detals
@@ -40,6 +41,10 @@ void mallEmployees::getEmployeeDetails() {
     cout << "Additional Details: \n"; //Prints details from this class
     cout << "Employee Salary: " << salary;
     cout << "Employee UAN: " << UAN;
+    if (empCategory == partTime)
+        cout << "Category: Part Time\n";
+    else
+        cout << "Category: Full time\n";
 }
 
 //Function to print Employee salary
@@ -53,6 +58,14 @@ void mallEmployees::getBankDetails() {
     cout << "Bank Name: " << salaryAccount.bankName << endl;
     cout << "Account number: " << salaryAccount.accountNumber << endl;
     cout << "IFSC code: " << salaryAccount.ifsc << endl;
+}
+
+void mallEmployees::setmallEMployee() {
+
+    cout << "Give the details as asked\n";
+    setUAN();
+    setCategory();
+    setBankAccount();
 }
 
 //Function to process the salary of the employee
