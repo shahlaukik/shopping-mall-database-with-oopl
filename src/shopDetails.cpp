@@ -1,12 +1,12 @@
-#include "../include/propertyDetails.hpp"
+#include "../include/shopDetails.hpp"
 #include <iostream>
 using namespace std;
 
 //defining functions
 
-void propertyDetails::setPropertyID() {
+void propertyDetails::setshopID() {
     cout << "Enter the ID :";
-    cin >> propertyID;
+    cin >> shopID;
 }
 
 void propertyDetails::setPropertyNumber() {
