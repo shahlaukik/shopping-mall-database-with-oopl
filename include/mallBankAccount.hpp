@@ -9,7 +9,6 @@ class mallBankAccount {
     public:
     struct bankAccount mallAccount;
     float balance;
-    mallBankAccount(float Balance);
     void withdraw();
     void deposit();
     float getBalance();
