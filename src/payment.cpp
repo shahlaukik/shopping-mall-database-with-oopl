@@ -1,6 +1,7 @@
-#include "payment.hpp"
+#include "../include/payment.hpp"
 #include "../include/customDataTypes.hpp"
-#include "mallBankAccount.hpp"
+#include "../include/mallBankAccount.hpp"
+
 #include <iostream>
 #include <string.h>
 using namespace std;
