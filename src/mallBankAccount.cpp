@@ -1,4 +1,5 @@
-#include "mallBankAccount.hpp"
+#include "../include/mallBankAccount.hpp"
+#include "../include/customDataTypes.hpp"
 #include <iostream>
 #include <string.h>
 using namespace std;
@@ -27,4 +28,5 @@ void mallBankAccount::deposit() {
 
 float mallBankAccount::getBalance() {
     cout << "The Amount in the Mall Bank Account is: " << balance << "/-";
+    return balance;
 }
