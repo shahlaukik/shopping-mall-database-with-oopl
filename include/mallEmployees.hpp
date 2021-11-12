@@ -2,7 +2,7 @@
 #ifndef MALLEMPLOYEES_H
 #define MALLEMPLOYEES_H
 #include "./customDataTypes.hpp"
-
+#include "./employee.hpp"
 #include "string"
 
 class mallEmployees : public employee {
