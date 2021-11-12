@@ -4,35 +4,35 @@ using namespace std;
 
 //defining functions
 
-void PropertyDetails::setPropertyID() {
-    cout << "\nEnter the ID :";
-    cin >> PropertyID;
+void propertyDetails::setPropertyID() {
+    cout << "Enter the ID :";
+    cin >> propertyID;
 }
 
-void PropertyDetails::setPropertyNumber() {
-    cout << "\nEnter the PropertyNumber :";
-    cin >> PropertyNumber;
+void propertyDetails::setPropertyNumber() {
+    cout << "Enter the PropertyNumber :";
+    cin >> propertyNumber;
 }
 
-void PropertyDetails::setFloor() {
-    cout << "\nEnter the Floor Number :";
-    cin >> Floor;
+void propertyDetails::setFloor() {
+    cout << "Enter the Floor Number :";
+    cin >> floor;
 }
 
-void PropertyDetails::setArea() {
-    cout << "\nEnter Property's Area :";
-    cin >> Area;
+void propertyDetails::setArea() {
+    cout << "Enter Property's Area :";
+    cin >> area;
 }
 
-void PropertyDetails::setOwnerRPID() {
-    cout << "\nEnter Owner's RPID :";
-    cin >> OwnerRPID;
+void propertyDetails::setOwnerRPID() {
+    cout << "Enter Owner's RPID :";
+    cin >> ownerRPID;
 }
 
-void PropertyDetails::getOwnerRPID() {
-    cout << "\nOwnerRPID is :" << OwnerRPID;
+void propertyDetails::getOwnerRPID() {
+    cout << "OwnerRPID is :" << ownerRPID;
 }
 
 void PropertyDetails::getDateOfPurchase() {
-    cout << "\nThe Date of Purchase :" << DateOfPurchase.day << "/" << DateOfPurchase.month << "/" <<DateOfPurchase.year;
+    cout << "The Date of Purchase :" << dateOfPurchase.day << "/" << dateOfPurchase.month << "/" << dateOfPurchase.year;
 }
