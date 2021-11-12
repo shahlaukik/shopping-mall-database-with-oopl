@@ -37,6 +37,43 @@ struct bankAccount {
     string ifsc;
 };
 
+// modified from heer
+enum modeOfTrxn {
+    Cheque = 0,
+    Transfer = 1,
+};
+
+enum typeOfTrxn {
+    In = 0,
+    Out = 1,
+};
+
+enum trxnState { 
+    Pending = 0,
+    Approved = 1,
+    Rejected = 2,
+};
+
+struct transaction {
+    float amount;
+    date trxnDate;
+    timeM trxnTime;
+    modeOfTrxn mode;
+    typeOfTrxn type;
+    string referenceNumber; // checkID or transferID
+};
+
+struct cheque {
+    string chequeNumber;
+    bankAccount bankAccount;
+};
+
+struct bankTransfer {
+    bankAccount fromBankAccount;
+    bankAccount toBankAccount;
+    string UTN;
+};
+
 // functions for input and output of structs and enums
 address setAddress();
 void getAddress(address address);
@@ -48,9 +85,24 @@ gender setGender();
 void getGender(gender gender);
 bankAccount setBankAccount();
 void getBankAccount(bankAccount bankAccount);
+modeOfTrxn setModeOfTrxn();
+void getModeOfTrxn(modeOfTrxn modeOfTrxn);
+typeOfTrxn setTypeOfTrxn();
+void getTypeOfTrxn(typeOfTrxn typeOfTrxn);
+trxnState setTrxnState();
+void getTrxnState(trxnState trxnState);
+transaction setTransaction();
+void getTransaction(transaction transaction);
+cheque setCheque();
+void getCheque(cheque cheque);
+bankTransfer setBankTransfer();
+void getBankTransfer(bankTransfer bankTransfer);
 
 // Functions to get current date and time
 date getCurrentDate();
 timeM getCurrentTime();
+
+// Function to randomaly generate a 5 digit ID
+int generateID();
 
 #endif // CUSTOMDATATYPES_HPP

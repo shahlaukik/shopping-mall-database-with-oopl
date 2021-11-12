@@ -1,11 +1,8 @@
-#include "mallEmployees.hpp"
+#include "../include/mallEmployees.hpp"
 #include <iostream>
 #include <string>
 using namespace std;
 
-//Constructor of the class
-mallEmployees::mallEmployees() {
-}
 
 //function to take UAN number
 void mallEmployees::setUAN() {
@@ -72,4 +69,5 @@ void mallEmployees::setmallEMployee() {
 bool mallEmployees::paysalary() {
     cout << "The salary of the employee for this month is being processed\n";
     cout << "The transaction ID is: " << rand();
+    return true;
 }
