@@ -3,6 +3,7 @@
 #define PAYOUT_HPP
 
 #include <iostream>
+#include "../include/mallBankAccount.hpp"
 using namespace std;
 
 class payout {
