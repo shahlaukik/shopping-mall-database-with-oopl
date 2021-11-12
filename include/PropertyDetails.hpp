@@ -1,7 +1,7 @@
 #pragma once
 #ifndef PROPERTYDETAILS_HPP
 #define PROPERTYDETAILS_HPP
-#include "../customDataTypes.hpp"
+#include "customDataTypes.hpp"
 using namespace std;
 
 class propertyDetails //class declaration

@@ -1,4 +1,4 @@
-#include "../include/PropertyDetails.hpp"
+#include "../include/propertyDetails.hpp"
 #include <iostream>
 using namespace std;
 
@@ -33,6 +33,6 @@ void propertyDetails::getOwnerRPID() {
     cout << "OwnerRPID is :" << ownerRPID;
 }
 
-void PropertyDetails::getDateOfPurchase() {
+void propertyDetails::getDateOfPurchase() {
     cout << "The Date of Purchase :" << dateOfPurchase.day << "/" << dateOfPurchase.month << "/" << dateOfPurchase.year;
 }
