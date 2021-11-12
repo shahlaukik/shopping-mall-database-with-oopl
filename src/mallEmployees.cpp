@@ -37,7 +37,7 @@ void mallEmployees::setBankAccount() {
 void mallEmployees::getEmployeeDetails() {
 
     cout << "The below are the details of the employee\n";
-    putData();                        //Print data from Employee Class
+    // putData();                        //Print data from Employee Class
     cout << "Additional Details: \n"; //Prints details from this class
     cout << "Employee Salary: " << salary;
     cout << "Employee UAN: " << UAN;
