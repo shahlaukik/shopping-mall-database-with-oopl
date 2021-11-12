@@ -1,21 +1,22 @@
 #pragma once
 #ifndef PROPERTYDETAILS_HPP
 #define PROPERTYDETAILS_HPP
-#include "./customDataTypes.hpp"
+#include "../customDataTypes.hpp"
 using namespace std;
 
 class PropertyDetails //class declaration
 {
     //declaring data-members
-    public:
-    int PropertyID;
-    int PropertyNumber;
-    int Floor;
-    float Area;
-    int OwnerRPID;
-    struct date DateOfPurchase;
+    protected:
+    int propertyID;
+    int propertyNumber;
+    int floor;
+    float area;
+    int ownerRPID;
+    struct date dateOfPurchase;
 
     //declaring functions
+    public:
     void setPropertyID();
     void setPropertyNumber();
     void setFloor();
