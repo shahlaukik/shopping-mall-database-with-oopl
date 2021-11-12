@@ -1,6 +1,6 @@
 #include "../include/customDataTypes.hpp"
-#include <iostream>
 #include <ctime>
+#include <iostream>
 using namespace std;
 
 // Function to take input for address
@@ -62,7 +62,7 @@ gender setGender() {
     char temp;
     bool valid = false;
     while (!valid) {
-        cout << "Enter gender (Male-0, Female-1): ";
+        cout << "Enter gender (M/F): ";
         cin >> temp;
         switch (temp) {
         case 'F':
@@ -94,6 +94,7 @@ bankAccount setBankAccount() {
     cin >> bankAccount.accountNumber;
     cout << "IFSC: ";
     cin >> bankAccount.ifsc;
+    return bankAccount;
 }
 // Function to print bankAccount details
 void getBankAccount(bankAccount bankAccount) {
@@ -101,6 +102,149 @@ void getBankAccount(bankAccount bankAccount) {
     cout << "Account Number: " << bankAccount.accountNumber << endl;
     cout << "IFSC: " << bankAccount.ifsc << endl;
 }
+
+// Function to take input for mode of transaction
+modeOfTrxn setModeOfTrxn() {
+    modeOfTrxn modeOfTrxn;
+    char temp;
+    bool valid = false;
+    while (!valid) {
+        cout << "Enter mode of transaction (Cheque(C)/Transfer(T)): ";
+        cin >> temp;
+        switch (temp) {
+        case 'C':
+            modeOfTrxn = Cheque;
+            valid = true;
+            break;
+        case 'T':
+            modeOfTrxn = Transfer;
+            valid = true;
+            break;
+        default:
+            cout << "Enter a valid choice" << endl;
+        }
+    }
+    return modeOfTrxn;
+}
+
+// Function to print mode of transaction
+void getModeOfTrxn(modeOfTrxn modeOfTrxn) {
+    cout << "Mode of transaction: " << modeOfTrxn << endl;
+}
+
+// Function to take input for type of transaction
+typeOfTrxn setTypeOfTrxn() {
+    typeOfTrxn typeOfTrxn;
+    char temp;
+    bool valid = false;
+    while (!valid) {
+        cout << "Enter type of transaction (Inword(I)/Outword(O)): ";
+        cin >> temp;
+        switch (temp) {
+        case 'I':
+            typeOfTrxn = In;
+            valid = true;
+            break;
+        case 'O':
+            typeOfTrxn = Out;
+            valid = true;
+            break;
+        default:
+            cout << "Enter a valid choice" << endl;
+        }
+    }
+    return typeOfTrxn;
+}
+// Function to print type of transaction
+void getTypeOfTrxn(typeOfTrxn typeOfTrxn) {
+    cout << "Type of transaction: " << typeOfTrxn << endl;
+}
+
+// Function to take input for transaction state
+trxnState setTrxnState() {
+    trxnState trxnState;
+    char temp;
+    bool valid = false;
+    while (!valid) {
+        cout << "Enter transaction state (Pending(P)/Approved(A)/Rejected(R)): ";
+        cin >> temp;
+        switch (temp) {
+        case 'P':
+            trxnState = Pending;
+            valid = true;
+            break;
+        case 'A':
+            trxnState = Approved;
+            valid = true;
+            break;
+        case 'R':
+            trxnState = Rejected;
+            valid = true;
+            break;
+        default:
+            cout << "Enter a valid choice" << endl;
+        }
+    }
+    return trxnState;
+}
+// Function to print transaction state
+void getTrxnState(trxnState trxnState) {
+    cout << "Transaction state: " << trxnState << endl;
+}
+
+// Function to take input for transaction details
+transaction setTransaction() {
+    transaction transaction;
+    cout << "Enter transaction details:" << endl;
+    transaction.trxnDate = getCurrentDate();
+    transaction.trxnTime = getCurrentTime();
+    cout << "Enter the transaction amount: ";
+    cin >> transaction.amount;
+    transaction.mode = setModeOfTrxn();
+    transaction.type = setTypeOfTrxn();
+    return transaction;
+}
+// Function to print transaction details
+void getTransaction(transaction transaction) {
+    cout << "Transaction details:" << endl;
+    getDate(transaction.trxnDate);
+    getTime(transaction.trxnTime);
+    cout << "Amount: " << transaction.amount << endl;
+    getModeOfTrxn(transaction.mode);
+    getTypeOfTrxn(transaction.type);
+}
+
+// Function to take input for cheque details
+cheque setCheque() {
+    cheque cheque;
+    cout << "Enter cheque details:" << endl;
+    cout << "Enter the cheque number: ";
+    cin >> cheque.chequeNumber;
+    cheque.bankAccount = setBankAccount();
+    return cheque;
+}
+// Function to print cheque details
+void getCheque(cheque cheque) {
+    cout << "Cheque details:" << endl;
+    cout << "Cheque number: " << cheque.chequeNumber << endl;
+    getBankAccount(cheque.bankAccount);
+    cout << "\n";
+}
+
+// Function to take input for bank transfer
+bankTransfer setBankTransfer() {
+    bankTransfer bankTransfer;
+    cout << "Enter bank transfer details:" << endl;
+    cout << "Enter the unique transaction number: ";
+    cin >> bankTransfer.UTN;
+    cout << "Enter beneficiary account details:"<<endl;
+    bankTransfer.toBankAccount = setBankAccount();
+    cout << "Enter account details from which money is transferred:" << endl;
+    bankTransfer.fromBankAccount = setBankAccount();
+    return bankTransfer;
+}
+// Function to print bank transfer details
+void getBankTransfer(bankTransfer bankTransfer);
 
 // Function to get current date
 date getCurrentDate() {
@@ -121,4 +265,11 @@ timeM getCurrentTime() {
     timeM.minute = ltm->tm_min;
     timeM.second = ltm->tm_sec;
     return timeM;
+}
+
+// Function to generate a unique 5 digit ID
+int generateID() {
+    srand(time(0));
+    int id = rand() % 99999 + 10000;
+    return id;
 }
