@@ -8,6 +8,7 @@
 class payment {
     protected:
     int paymentID;
+    string paymentFrom;
     string description;
     struct transaction accTransaction;
     enum trxnState paymentState;
@@ -15,4 +16,5 @@ class payment {
     public:
     void acceptPayment(mallBankAccount mallAccount);
 };
+
 #endif

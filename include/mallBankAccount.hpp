@@ -6,10 +6,9 @@ class mallBankAccount {
     mallBankAccount(float balance);
 
     protected:
-    struct bankAccount mallBankAccount;
-    float balance;
-
     public:
+    struct bankAccount mallAccount;
+    float balance;
     mallBankAccount(float Balance);
     void withdraw();
     void deposit();
