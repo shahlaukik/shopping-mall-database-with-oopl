@@ -3,11 +3,11 @@
 #include <fstream>
 using namespace std;
 
-void loadDatabase(vector<recognisedPerson> &recognisedPersons,
-                  vector<recognisedOrganisation> &recognisedOrganisations,
-                  vector<shopDetails> &shops,
-                  vector<employee> &employees,
-                  vector<mallEmployees> &vmallEmployees) {
+void loadDatabase(vector<recognisedPerson> &vRecognisedPersons,
+                  vector<recognisedOrganisation> &vRecognisedOrganisations,
+                  vector<shopDetails> &vShops,
+                  vector<employee> &vEmployees,
+                  vector<mallEmployees> &vMallEmployees) {
 
     // Load recognised persons
     ifstream recognisedPersonsFile;
@@ -16,7 +16,7 @@ void loadDatabase(vector<recognisedPerson> &recognisedPersons,
     while (!recognisedPersonsFile.eof() &&
            !recognisedPersonsFile.peek() == std::ifstream::traits_type::eof()) {
         recognisedPersonsFile.read((char *)&recognisedPerson, sizeof(recognisedPerson));
-        recognisedPersons.push_back(recognisedPerson);
+        vRecognisedPersons.push_back(recognisedPerson);
     }
     recognisedPersonsFile.close();
 
@@ -27,7 +27,7 @@ void loadDatabase(vector<recognisedPerson> &recognisedPersons,
     while (!recognisedOrganisationsFile.eof() &&
            !recognisedOrganisationsFile.peek() == std::ifstream::traits_type::eof()) {
         recognisedOrganisationsFile.read((char *)&recognisedOrganisation, sizeof(recognisedOrganisation));
-        recognisedOrganisations.push_back(recognisedOrganisation);
+        vRecognisedOrganisations.push_back(recognisedOrganisation);
     }
     recognisedOrganisationsFile.close();
 
@@ -38,7 +38,7 @@ void loadDatabase(vector<recognisedPerson> &recognisedPersons,
     while (!shopsFile.eof() &&
            !shopsFile.peek() == std::ifstream::traits_type::eof()) {
         shopsFile.read((char *)&shop, sizeof(shop));
-        shops.push_back(shop);
+        vShops.push_back(shop);
     }
     shopsFile.close();
 
@@ -49,7 +49,7 @@ void loadDatabase(vector<recognisedPerson> &recognisedPersons,
     while (!employeesFile.eof() &&
            !employeesFile.peek() == std::ifstream::traits_type::eof()) {
         employeesFile.read((char *)&employee, sizeof(employee));
-        employees.push_back(employee);
+        vEmployees.push_back(employee);
     }
     employeesFile.close();
 
@@ -60,7 +60,7 @@ void loadDatabase(vector<recognisedPerson> &recognisedPersons,
     while (!mallEmployeesFile.eof() &&
            !mallEmployeesFile.peek() == std::ifstream::traits_type::eof()) {
         mallEmployeesFile.read((char *)&mallEmployee, sizeof(mallEmployee));
-        vmallEmployees.push_back(mallEmployee);
+        vMallEmployees.push_back(mallEmployee);
     }
     mallEmployeesFile.close();
 }
