@@ -4,35 +4,35 @@ using namespace std;
 
 //defining functions
 
-void propertyDetails::setshopID() {
+void shopDetails::setshopID() {
     cout << "Enter the ID :";
     cin >> shopID;
 }
 
-void propertyDetails::setPropertyNumber() {
+void shopDetails::setPropertyNumber() {
     cout << "Enter the PropertyNumber :";
     cin >> propertyNumber;
 }
 
-void propertyDetails::setFloor() {
+void shopDetails::setFloor() {
     cout << "Enter the Floor Number :";
     cin >> floor;
 }
 
-void propertyDetails::setArea() {
+void shopDetails::setArea() {
     cout << "Enter Property's Area :";
     cin >> area;
 }
 
-void propertyDetails::setOwnerRPID() {
+void shopDetails::setOwnerRPID() {
     cout << "Enter Owner's RPID :";
     cin >> ownerRPID;
 }
 
-void propertyDetails::getOwnerRPID() {
+void shopDetails::getOwnerRPID() {
     cout << "OwnerRPID is :" << ownerRPID;
 }
 
-void propertyDetails::getDateOfPurchase() {
+void shopDetails::getDateOfPurchase() {
     cout << "The Date of Purchase :" << dateOfPurchase.day << "/" << dateOfPurchase.month << "/" << dateOfPurchase.year;
 }
