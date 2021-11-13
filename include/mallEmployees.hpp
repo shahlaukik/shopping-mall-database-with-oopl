@@ -1,9 +1,9 @@
 #pragma once
 #ifndef MALLEMPLOYEES_HPP
 #define MALLEMPLOYEES_HPP
+
 #include "./customDataTypes.hpp"
-
-
+#include "./employee.hpp"
 #include "string"
 
 class mallEmployees : public employee {
