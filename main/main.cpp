@@ -22,8 +22,7 @@ int main() {
         break;
     }
 
-    
-    return 0;
+        return 0;
 
     // Store to the database
     // saveDatabase(recognisedPersons, recognisedOrganisations, shops, employees, mallEmployees);

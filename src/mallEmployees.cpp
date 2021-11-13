@@ -1,8 +1,9 @@
 #include "../include/mallEmployees.hpp"
+#include "../include/customDataTypes.hpp"
+
 #include <iostream>
 #include <string>
 using namespace std;
-
 
 //function to take UAN number
 void mallEmployees::setUAN() {
@@ -60,6 +61,7 @@ void mallEmployees::getBankDetails() {
 void mallEmployees::setmallEMployee() {
 
     cout << "Give the details as asked\n";
+
     setUAN();
     setCategory();
     setBankAccount();
@@ -70,4 +72,11 @@ bool mallEmployees::paysalary() {
     cout << "The salary of the employee for this month is being processed\n";
     cout << "The transaction ID is: " << rand();
     return true;
+}
+
+//Function to take Salary
+void mallEmployees::setSalary() {
+
+    cout << "Give the salary: ";
+    cin >> salary;
 }

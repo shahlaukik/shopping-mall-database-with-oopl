@@ -20,6 +20,7 @@ class mallEmployees : public employee {
     void setUAN();
     void setCategory();
     void setBankAccount();
+    void setSalary();
     void getEmployeeDetails();
     void getEmployeeSalary();
     void getBankDetails();
