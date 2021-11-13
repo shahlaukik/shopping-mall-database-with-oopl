@@ -9,6 +9,7 @@
 #include <vector>
 #include <ios> //for <steamsize>
 #include <limits> //for numeric_limits
+#include <fstream>
 
 // Custom header files
 #include "../include/customDataTypes.hpp"

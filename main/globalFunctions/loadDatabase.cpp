@@ -11,7 +11,7 @@ void loadDatabase(vector<recognisedPerson> &recognisedPersons,
 
     // Load recognised persons
     ifstream recognisedPersonsFile;
-    recognisedPersonsFile.open("../database/recognisedPersons.txt", ios::in);
+    recognisedPersonsFile.open("recognisedPersons.txt", ios::in);
     recognisedPerson recognisedPerson;
     while (!recognisedPersonsFile.eof() &&
            !recognisedPersonsFile.peek() == std::ifstream::traits_type::eof()) {
@@ -22,7 +22,7 @@ void loadDatabase(vector<recognisedPerson> &recognisedPersons,
 
     // Load recognised organisations
     ifstream recognisedOrganisationsFile;
-    recognisedOrganisationsFile.open("../database/recognisedOrganisations.txt", ios::in);
+    recognisedOrganisationsFile.open("recognisedOrganisations.txt", ios::in);
     recognisedOrganisation recognisedOrganisation;
     while (!recognisedOrganisationsFile.eof() &&
            !recognisedOrganisationsFile.peek() == std::ifstream::traits_type::eof()) {
@@ -33,7 +33,7 @@ void loadDatabase(vector<recognisedPerson> &recognisedPersons,
 
     // Load shops
     ifstream shopsFile;
-    shopsFile.open("../database/shops.txt", ios::in);
+    shopsFile.open("shops.txt", ios::in);
     shopDetails shop;
     while (!shopsFile.eof() &&
            !shopsFile.peek() == std::ifstream::traits_type::eof()) {
@@ -44,7 +44,7 @@ void loadDatabase(vector<recognisedPerson> &recognisedPersons,
 
     // Load employees
     ifstream employeesFile;
-    employeesFile.open("../database/employees.txt", ios::in);
+    employeesFile.open("employees.txt", ios::in);
     employee employee;
     while (!employeesFile.eof() &&
            !employeesFile.peek() == std::ifstream::traits_type::eof()) {
@@ -55,7 +55,7 @@ void loadDatabase(vector<recognisedPerson> &recognisedPersons,
 
     // Load mall employees
     ifstream mallEmployeesFile;
-    mallEmployeesFile.open("../database/mallEmployees.txt", ios::in);
+    mallEmployeesFile.open("mallEmployees.txt", ios::in);
     mallEmployees mallEmployee;
     while (!mallEmployeesFile.eof() &&
            !mallEmployeesFile.peek() == std::ifstream::traits_type::eof()) {

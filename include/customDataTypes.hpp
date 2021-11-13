@@ -37,12 +37,6 @@ struct bankAccount {
     string ifsc;
 };
 
-// modified from heer
-enum modeOfTrxn {
-    Cheque = 0,
-    Transfer = 1,
-};
-
 enum typeOfTrxn {
     In = 0,
     Out = 1,
@@ -58,20 +52,8 @@ struct transaction {
     float amount;
     date trxnDate;
     timeM trxnTime;
-    modeOfTrxn mode;
     typeOfTrxn type;
     string referenceNumber; // checkID or transferID
-};
-
-struct cheque {
-    string chequeNumber;
-    bankAccount bankAccount;
-};
-
-struct bankTransfer {
-    bankAccount fromBankAccount;
-    bankAccount toBankAccount;
-    string UTN;
 };
 
 // functions for input and output of structs and enums
@@ -90,9 +72,6 @@ void getGender(gender gender);
 bankAccount setBankAccount();
 void getBankAccount(bankAccount bankAccount);
 
-modeOfTrxn setModeOfTrxn();
-void getModeOfTrxn(modeOfTrxn modeOfTrxn);
-
 typeOfTrxn setTypeOfTrxn();
 void getTypeOfTrxn(typeOfTrxn typeOfTrxn);
 
@@ -101,12 +80,6 @@ void getTrxnState(trxnState trxnState);
 
 transaction setTransaction();
 void getTransaction(transaction transaction);
-
-cheque setCheque();
-void getCheque(cheque cheque);
-
-bankTransfer setBankTransfer();
-void getBankTransfer(bankTransfer bankTransfer);
 
 // Functions to get current date and time
 date getCurrentDate();
