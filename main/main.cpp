@@ -1,13 +1,18 @@
 #include "main.hpp"
-#include <iostream>
-#include <vector>
 using namespace std;
 
 int main() {
 
-    // loading Database
-
+    // Declare all the vectors
     vector<recognisedPerson> recognisedPersons;
+    vector<recognisedOrganisation> recognisedOrganisations;
+    vector<shopDetails> shops;
+    vector<employee> employees;
+    vector<mallEmployees> mallEmployees;
+
+    // Loading Database
+    // loadDatabase(recognisedPersons, recognisedOrganisations, shops, employees, mallEmployees);
+
     char choice;
     cout << "Choices" << endl;
     cin >> choice;
@@ -16,7 +21,9 @@ int main() {
         optionPerson(recognisedPersons);
         break;
     }
-    return 0;
 
-    //store
+        return 0;
+
+    // Store to the database
+    // saveDatabase(recognisedPersons, recognisedOrganisations, shops, employees, mallEmployees);
 }

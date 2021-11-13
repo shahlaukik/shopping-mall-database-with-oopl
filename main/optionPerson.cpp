@@ -67,7 +67,9 @@ void displayPerson(vector<recognisedPerson> &recognisedPersons) {
 
 }
 
+// Main function of this file that will be used
 void optionPerson(vector<recognisedPerson> &recognisedPersons) {
+    system("cls");
     int choice;
     cout << endl
          << "\n1   :   ADD PERSON"

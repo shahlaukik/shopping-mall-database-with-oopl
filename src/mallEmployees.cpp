@@ -70,7 +70,6 @@ void mallEmployees::setmallEMployee() {
 //Function to process the salary of the employee
 bool mallEmployees::paysalary() {
     cout << "The salary of the employee for this month is being processed\n";
-
     cout << "The transaction ID is: " << rand();
     return true;
 }
