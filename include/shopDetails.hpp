@@ -4,7 +4,7 @@
 #include "customDataTypes.hpp"
 using namespace std;
 
-class propertyDetails //class declaration
+class shopDetails //class declaration
 {
     //declaring data-members
     protected:

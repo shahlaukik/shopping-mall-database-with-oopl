@@ -1,25 +1,30 @@
 #include "main.hpp"
-#include <iostream>
-#include <vector>
 using namespace std;
 
-int main()
-{
+int main() {
 
-    // loading Database
-    
+    // Declare all the vectors
     vector<recognisedPerson> recognisedPersons;
+    vector<recognisedOrganisation> recognisedOrganisations;
+    vector<shopDetails> shops;
+    vector<employee> employees;
+    vector<mallEmployees> mallEmployees;
+
+    // Loading Database
+    // loadDatabase(recognisedPersons, recognisedOrganisations, shops, employees, mallEmployees);
+
     char choice;
     cout << "Choices" << endl;
     cin >> choice;
-    switch (choice)
-    {
+    switch (choice) {
     case '1':
         optionPerson(recognisedPersons);
         break;
     }
+
+    
     return 0;
 
-    //store
+    // Store to the database
+    // saveDatabase(recognisedPersons, recognisedOrganisations, shops, employees, mallEmployees);
 }
-
