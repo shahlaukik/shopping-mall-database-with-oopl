@@ -1,4 +1,4 @@
-#include "../include/recognisedPerson.hpp"
+#include "../../include/recognisedPerson.hpp"
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -50,6 +50,7 @@ void displayPerson(vector<recognisedPerson> &recognisedPersons) {
                     break;
                 }
             }
+            break;
         }
 
         case 2:
@@ -75,7 +76,7 @@ void optionPerson(vector<recognisedPerson> &recognisedPersons) {
          << "\n1   :   ADD PERSON"
          << "\n2   :   REMOVE PERSON"
          << "\n3   :   DISPLAY PERSON-DETAILS"
-         << "ENTER YOUR CHOICE: ";
+         << "\nENTER YOUR CHOICE: ";
     cin >> choice;
 
     switch (choice) {

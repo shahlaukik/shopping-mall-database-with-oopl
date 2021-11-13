@@ -25,7 +25,6 @@ void getAddress(address address) {
 // Function to take input for date
 date setDate() {
     date date;
-    cout << "Enter date:" << endl;
     cout << "Enter the day: ";
     cin >> date.day;
     cout << "Enter the month: ";
