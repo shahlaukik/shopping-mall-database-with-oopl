@@ -17,13 +17,19 @@ class shopDetails //class declaration
 
     //declaring functions
     public:
-    void setshopID();
+    void setShopID();
     void setPropertyNumber();
     void setFloor();
     void setArea();
     void setOwnerRPID();
-    void getOwnerRPID();
-    void getDateOfPurchase();
+    void setDateOfPurchase();
+    
+    //Function to get all the details
+    void getDetails();
+    
+    //function to return the data member
+    int returnShopID();
+
 };
 
 #endif

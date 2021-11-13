@@ -6,7 +6,7 @@ int main() {
     // Declare all the vectors
     vector<recognisedPerson> recognisedPersons;
     vector<recognisedOrganisation> recognisedOrganisations;
-    vector<shopDetails> shops;
+    vector<shopDetails> shopDetails;
     vector<employee> employees;
     vector<mallEmployees> mallEmployees;
 

@@ -4,7 +4,7 @@ using namespace std;
 
 //defining functions
 
-void shopDetails::setshopID() {
+void shopDetails::setShopID() {
     cout << "Enter the ID :";
     cin >> shopID;
 }
@@ -29,10 +29,23 @@ void shopDetails::setOwnerRPID() {
     cin >> ownerRPID;
 }
 
-void shopDetails::getOwnerRPID() {
-    cout << "OwnerRPID is :" << ownerRPID;
+void shopDetails::setDateOfPurchase(){
+    cout << "Enter Date of Purchase :" << endl;
+    cout << "Enter Day :";    cin >> dateOfPurchase.day; 
+    cout << "Enter Month :";    cin >> dateOfPurchase.month;
+    cout << "Enter Year :";    cin >> dateOfPurchase.year;
 }
 
-void shopDetails::getDateOfPurchase() {
+void shopDetails::getDetails() {
+    cout << "Shop ID is :" << shopID << endl;
+    cout << "Property Number is :" << propertyNumber << endl;
+    cout << "It is on the floor :" << floor << endl;
+    cout << "Its area is " << area << " sq. units." << endl;
+    cout << "OwnerRPID is :" << ownerRPID << endl;
     cout << "The Date of Purchase :" << dateOfPurchase.day << "/" << dateOfPurchase.month << "/" << dateOfPurchase.year;
+
+}
+
+int shopDetails::returnShopID() {
+    return shopID;
 }
