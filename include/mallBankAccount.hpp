@@ -1,14 +1,14 @@
 #pragma once
-#ifndef MALLBANKACCOUNT_H
-#define MALLBANKACCOUNT_H
+#ifndef MALLBANKACCOUNT_HPP
+#define MALLBANKACCOUNT_HPP
 #include "./customDataTypes.hpp"
-class mallBankAccount {
-    mallBankAccount(float balance);
 
-    protected:
-    public:
+class mallBankAccount {
+    protected: 
     struct bankAccount mallAccount;
     float balance;
+    public:
+    mallBankAccount(float balance); 
     void withdraw();
     void deposit();
     float getBalance();
