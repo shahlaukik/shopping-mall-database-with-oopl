@@ -33,6 +33,7 @@ void employee::getDateOfJoining() {
 }
 void employee::getemployeeId() {
     cout << "The employee Id is :" << employeeId << endl;
+
 }
 void employee::getCategory() {
     if (empcategory == parttime)

@@ -26,5 +26,6 @@ class mallEmployees : public employee {
     void getBankDetails();
     bool paysalary();
     void setmallEMployee();
+    void setEmployeeSalary(float Amount);
 };
 #endif

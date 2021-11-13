@@ -80,3 +80,8 @@ void mallEmployees::setSalary() {
     cout << "Give the salary: ";
     cin >> salary;
 }
+
+void mallEmployees::setEmployeeSalary(float Amount)
+{
+    salary = Amount;
+}
