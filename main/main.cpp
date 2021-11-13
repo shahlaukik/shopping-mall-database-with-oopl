@@ -23,8 +23,14 @@ int main() {
     }
 
     
-    return 0;
-
     // Store to the database
     // saveDatabase(recognisedPersons, recognisedOrganisations, shops, employees, mallEmployees);
+
+    // exit after user aknowledges
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cin.get();
+
+
+    return 0;
 }

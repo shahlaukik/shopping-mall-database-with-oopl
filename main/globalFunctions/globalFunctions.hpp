@@ -16,7 +16,8 @@ void saveDatabase(vector<recognisedPerson> &recognisedPersons,
                   vector<employee> &employees,
                   vector<mallEmployees> &mallEmployees);
 
-// Function to give choices to user
+// Functions to give choices to user
 void optionPerson(vector<recognisedPerson> &recognisedPersons);
+void optionOrganisation(vector<recognisedOrganisation> &recognisedOrganisations);
 
 #endif // GLOBALFUNCTIONS_HPP
