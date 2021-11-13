@@ -3,8 +3,7 @@
 #define MALLBANKACCOUNT_HPP
 #include "./customDataTypes.hpp"
 
-class mallBankAccount {
-    protected:
+class mallBankAccount { 
     public:
     struct bankAccount mallAccount;
     mallBankAccount(float balance);
