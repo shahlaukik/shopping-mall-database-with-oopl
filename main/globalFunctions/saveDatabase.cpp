@@ -2,11 +2,11 @@
 #include "../main.hpp"
 using namespace std;
 
-void saveDatabase(vector<recognisedPerson> recognisedPersons,
-                  vector<recognisedOrganisation> recognisedOrganisations,
-                  vector<shopDetails> shops,
-                  vector<employee> employees,
-                  vector<mallEmployees> mallEmployees) {
+void saveDatabase(vector<recognisedPerson> &recognisedPersons,
+                  vector<recognisedOrganisation> &recognisedOrganisations,
+                  vector<shopDetails> &shops,
+                  vector<employee> &employees,
+                  vector<mallEmployees> &mallEmployees) {
 
     // Save recognised persons
     ofstream recognisedPersonsFile;
