@@ -57,8 +57,8 @@ void displayPerson(vector<mallEmployees> &vecMallEmployees) {
 
     case 2: {
         for (auto it = vecMallEmployees.begin(); it != vecMallEmployees.end(); it++) {
-            it->getEmpDetails(); //get details from Employee Class
-            it->getEmployeeDetails();
+            it->employee::getEmployeeDetails(); //get details from Employee Class
+            it->mallEmployees::getEmployeeDetails();
             cout << endl;
         }
         break;

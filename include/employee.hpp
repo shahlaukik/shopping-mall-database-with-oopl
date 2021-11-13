@@ -26,6 +26,7 @@ class employee : public recognisedPerson {
     void getType();
     void getDateOfJoining();
     void getEmployeeDetails();
+    int returnEmployeeId();
     
 };
 #endif

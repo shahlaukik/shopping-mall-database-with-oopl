@@ -83,3 +83,8 @@ void employee::getEmployeeDetails()
     getType();
     getDateOfJoining();
 }
+
+int employee::returnEmployeeId()
+{
+    return employeeId;
+}

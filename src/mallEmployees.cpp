@@ -61,7 +61,7 @@ void mallEmployees::getBankDetails() {
 void mallEmployees::setmallEMployee() {
 
     cout << "Give the details as asked\n";
-
+    this->employee::setEmployeeDetails();
     setUAN();
     setCategory();
     setBankAccount();
