@@ -22,5 +22,6 @@ void optionOrganisation(vector<recognisedOrganisation> &vRecognisedOrganisations
 void optionShop(vector<shopDetails> &vShops);
 void optionEmployee(vector<employee> &vEmployees);
 void optionMallEmployee(vector<mallEmployees> &vMallEmployees);
+void optionFinance(mallBankAccount &acMall, vector<mallEmployees> &vMallEmployees, vector<transaction> &vTransactions);
 
 #endif // GLOBALFUNCTIONS_HPP
