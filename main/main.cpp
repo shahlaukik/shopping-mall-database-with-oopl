@@ -3,17 +3,15 @@
 #include <vector>
 using namespace std;
 
-int main()
-{
+int main() {
 
     // loading Database
-    
+
     vector<recognisedPerson> recognisedPersons;
     char choice;
     cout << "Choices" << endl;
     cin >> choice;
-    switch (choice)
-    {
+    switch (choice) {
     case '1':
         optionPerson(recognisedPersons);
         break;
@@ -22,4 +20,3 @@ int main()
 
     //store
 }
-

@@ -47,7 +47,7 @@ bool payout::checkPayout(mallBankAccount *acMall, mallBankAccount *acThirdParty)
     cout << "\nEnter Amount to transfer: ";
     cin >> paybleAmount;
 
-    if ((int)paybleAmount < (int)(*acMall).balance) {
+    if ((int)paybleAmount < (int)(*acMall)->balance) {
         (*acMall).balance = (*acMall).balance - paybleAmount;
         (*acThirdParty).balance = (*acThirdParty).balance + paybleAmount;
 
