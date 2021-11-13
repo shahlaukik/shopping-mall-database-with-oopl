@@ -18,7 +18,8 @@ class employee : public recognisedPerson {
     void setSupervisorEmployeeId();
     void setCategory();
     void setType();
-    void setEmployeeDetails();
+    void setEmployeeDetails(); //to 
+    
     void getemployeeId();
     void getShopId();
     void getSupervisorEmployeeId();
