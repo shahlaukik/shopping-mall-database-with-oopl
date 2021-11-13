@@ -5,12 +5,12 @@
 #define GLOBALFUNCTIONS_HPP
 
 // Functions to store and load database at startup and shutdown
+void saveDatabase(vector<recognisedPerson> recognisedPersons,
+                  vector<recognisedOrganisation> recognisedOrganisations,
+                  vector<shopDetails> shops,
+                  vector<employee> employees,
+                  vector<mallEmployees> mallEmployees);
 void loadDatabase(vector<recognisedPerson> &recognisedPersons,
-                  vector<recognisedOrganisation> &recognisedOrganisations,
-                  vector<shopDetails> &shops,
-                  vector<employee> &employees,
-                  vector<mallEmployees> &mallEmployees);
-void saveDatabase(vector<recognisedPerson> &recognisedPersons,
                   vector<recognisedOrganisation> &recognisedOrganisations,
                   vector<shopDetails> &shops,
                   vector<employee> &employees,

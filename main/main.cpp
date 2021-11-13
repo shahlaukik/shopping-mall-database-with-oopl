@@ -11,9 +11,9 @@ int main() {
     vector<mallEmployees> mallEmployees;
 
     // Loading Database
-    // loadDatabase(recognisedPersons, recognisedOrganisations, shops, employees, mallEmployees);
-
-    while (1) {
+    loadDatabase(recognisedPersons, recognisedOrganisations, shopDetails, employees, mallEmployees);
+    bool repeat = true;
+    while (repeat) {
         char choice;
         cout << "Choices" << endl;
         cin >> choice;
@@ -21,11 +21,15 @@ int main() {
         case '1':
             optionPerson(recognisedPersons);
             break;
+        case 'e':
+            repeat = false;
+            break;
         }
     }
 
     // Store to the database
-    // saveDatabase(recognisedPersons, recognisedOrganisations, shops, employees, mallEmployees);
+    saveDatabase(recognisedPersons, recognisedOrganisations, shopDetails, employees, mallEmployees);
+    cout << "Finished";
 
     // exit after user aknowledges
     cin.clear();

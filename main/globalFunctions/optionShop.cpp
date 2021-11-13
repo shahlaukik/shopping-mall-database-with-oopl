@@ -6,7 +6,7 @@ using namespace std;
 //function to add Shop Details
 
 void addShopDetails(vector<shopDetails> &vShopDetails) {
-    shopDetails::shopDetails newShop;
+    shopDetails newShop;
     newShop.setShopID();
     newShop.setPropertyNumber();
     newShop.setFloor();
