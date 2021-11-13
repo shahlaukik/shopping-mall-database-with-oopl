@@ -1,6 +1,7 @@
 #pragma once
-#ifndef MALLEMPLOYEES_H
-#define MALLEMPLOYEES_H
+#ifndef MALLEMPLOYEES_HPP
+#define MALLEMPLOYEES_HPP
+
 #include "./customDataTypes.hpp"
 #include "./employee.hpp"
 #include "string"

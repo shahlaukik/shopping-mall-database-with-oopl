@@ -1,6 +1,6 @@
 #pragma once
-#ifndef PROPERTYDETAILS_HPP
-#define PROPERTYDETAILS_HPP
+#ifndef SHOPDETAILS_HPP
+#define SHOPDETAILS_HPP
 #include "customDataTypes.hpp"
 using namespace std;
 
@@ -8,7 +8,7 @@ class propertyDetails //class declaration
 {
     //declaring data-members
     protected:
-    int propertyID;
+    int shopID;
     int propertyNumber;
     int floor;
     float area;
@@ -17,7 +17,7 @@ class propertyDetails //class declaration
 
     //declaring functions
     public:
-    void setPropertyID();
+    void setshopID();
     void setPropertyNumber();
     void setFloor();
     void setArea();

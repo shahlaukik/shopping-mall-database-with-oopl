@@ -77,24 +77,34 @@ struct bankTransfer {
 // functions for input and output of structs and enums
 address setAddress();
 void getAddress(address address);
+
 date setDate();
 void getDate(date date);
+
 timeM setTime();
 void getTime(timeM timeM);
+
 gender setGender();
 void getGender(gender gender);
+
 bankAccount setBankAccount();
 void getBankAccount(bankAccount bankAccount);
+
 modeOfTrxn setModeOfTrxn();
 void getModeOfTrxn(modeOfTrxn modeOfTrxn);
+
 typeOfTrxn setTypeOfTrxn();
 void getTypeOfTrxn(typeOfTrxn typeOfTrxn);
+
 trxnState setTrxnState();
 void getTrxnState(trxnState trxnState);
+
 transaction setTransaction();
 void getTransaction(transaction transaction);
+
 cheque setCheque();
 void getCheque(cheque cheque);
+
 bankTransfer setBankTransfer();
 void getBankTransfer(bankTransfer bankTransfer);
 
