@@ -1,6 +1,7 @@
 #pragma once
-#ifndef PAYMENT_H
-#define PAYMENT_H
+#ifndef PAYMENT_HPP
+#define PAYMENT_HPP
+
 #include "./customDataTypes.hpp"
 #include "./mallBankAccount.hpp"
 #include "string"
@@ -17,4 +18,4 @@ class payment {
     void acceptPayment(mallBankAccount mallAccount);
 };
 
-#endif
+#endif 
