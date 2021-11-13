@@ -17,7 +17,7 @@ class payout {
     public:
     void setPayout(); // take input of all details at once
     void getPayout(); // give output of all details at once
-    bool checkPayout(mallBankAccount *acMall, mallBankAccount *acThirdParty);
+    bool checkPayout(mallBankAccount *acMall);
 
     // Functions to return details if required
 

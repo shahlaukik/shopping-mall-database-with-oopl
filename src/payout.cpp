@@ -41,24 +41,9 @@ void payout::getPayout() {
 
 // Function to make payment to a third party
 
-bool payout::checkPayout(mallBankAccount *acMall, mallBankAccount *acThirdParty) {
+bool payout::checkPayout(mallBankAccount *acMall) {
 
-    float paybleAmount;
-    cout << "\nEnter Amount to transfer: ";
-    cin >> paybleAmount;
-
-    if ((int)paybleAmount < (int)(*acMall).balance) {
-        (*acMall).balance = (*acMall).balance - paybleAmount;
-        (*acThirdParty).balance = (*acThirdParty).balance + paybleAmount;
-
-        cout << endl
-             << paybleAmount << " IS SUCCESSFULLY TRANSFERED.";
-        return true;
-    } else {
-        cout << endl
-             << "YOU DON'T HAVE REQUIRED AMMOUNT TO PAY ! ";
-        return false;
-    }
+    acMall->withdraw();
 }
 
 // Functions to return details if required
