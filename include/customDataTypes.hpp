@@ -95,4 +95,9 @@ timeM getCurrentTime();
 // Function to randomaly generate a 5 digit ID
 int generateID();
 
+category setCategory();
+type setType();
+void getCategory(category empCategory);
+void getType(type empType);
+
 #endif // CUSTOMDATATYPES_HPP

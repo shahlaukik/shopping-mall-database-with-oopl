@@ -4,12 +4,11 @@
 
 #include "./customDataTypes.hpp"
 #include "./employee.hpp"
-#include <vector>
 #include "string"
+#include <vector>
 
 class mallEmployees : public employee {
     protected:
-    category empCategory;
     struct bankAccount salaryAccount;
     string UAN;
     float salary;
@@ -18,13 +17,10 @@ class mallEmployees : public employee {
     public:
     int recognisedPersonID;
     void setUAN();
-    void setCategory();
     void setBankAccount();
-    void setSalary();
     void getEmployeeDetails();
     void getEmployeeSalary();
     void getBankDetails();
-    bool paysalary();
     void setmallEMployee();
     void setEmployeeSalary(float Amount);
 

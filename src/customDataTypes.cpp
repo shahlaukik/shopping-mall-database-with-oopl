@@ -219,3 +219,67 @@ int generateID() {
     int id = rand() % 99999 + 10000;
     return id;
 }
+
+category setCategory() {
+    category empcategory;
+    int temp;
+    bool valid = false;
+    while (!valid) {
+        cout << "Employee is which category?\n";
+        cout << "1. Part Time\n2. Full time\n";
+        cout << "Choose: ";
+        cin >> temp;
+        switch (temp) {
+        case 1:
+            empcategory = partTime;
+            valid = true;
+            break;
+        case 2:
+            empcategory = fullTime;
+            valid = true;
+            break;
+        default:
+            cout << "Enter a valid choice" << endl;
+        }
+    }
+    return empcategory;
+}
+type setType() {
+    type emptype;
+
+    int temp;
+    bool valid = false;
+    while (!valid) {
+        cout << "Enter the Employee type:\n";
+        cout << "1. Direct\n2. Contracted\n";
+        cout << "Choose: ";
+        cin >> temp;
+        switch (temp) {
+        case 1:
+            emptype = direct;
+            valid = true;
+            break;
+        case 2:
+            emptype = contracted;
+            valid = true;
+            break;
+        default:
+            cout << "Enter a valid choice" << endl;
+        }
+    }
+    return emptype;
+}
+
+void getType(type empType) {
+    if (empType == direct)
+        cout << "Type : Direct\n";
+    else
+        cout << "Type : Contracted\n";
+}
+
+void getCategory(category empCategory) {
+    if (empCategory == partTime)
+        cout << "Category: Part Time\n";
+    else
+        cout << "Category: Full time\n";
+}
