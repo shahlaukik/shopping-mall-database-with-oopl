@@ -21,7 +21,7 @@ void saveDatabase(vector<recognisedPerson> &vRecognisedPersons,
                   vector<transaction> &vTransactions,
                   vector<payout> &vPayouts,
                   vector<payment> &vPayments, 
-                  mallBankAccount &acMall)) {
+                  mallBankAccount &acMall) {
 
     // Save database file
     saveDatabase(vRecognisedPersons);
@@ -98,7 +98,7 @@ void saveDatabase(vector<shopDetails> &vShops) {
 
     // Write shops to database file
     for (int i = 0; i < vShops.size(); i++) {
-        shopsFile << vShops[i].shopId << endl;
+        shopsFile << vShops[i].shopID << endl;
         shopsFile << vShops[i].propertyNumber << endl;
         shopsFile << vShops[i].floor << endl;
         shopsFile << vShops[i].area << endl;
@@ -137,8 +137,8 @@ void saveDatabase(vector<employee> &vEmployees) {
         employeesFile << vEmployees[i].employeeId << endl;
         employeesFile << vEmployees[i].shopId << endl;
         employeesFile << vEmployees[i].supervisorEmployeeId << endl;
-        employeesFile << vEmployees[i].category << endl;
-        employeesFile << vEmployees[i].type << endl;
+        employeesFile << vEmployees[i].empcategory << endl;
+        employeesFile << vEmployees[i].emptype << endl;
         employeesFile << vEmployees[i].dateOfJoining.day << endl;
         employeesFile << vEmployees[i].dateOfJoining.month << endl;
         employeesFile << vEmployees[i].dateOfJoining.year << endl;
@@ -173,17 +173,16 @@ void saveDatabase(vector<mallEmployees> &vMallEmployees) {
         mallEmployeesFile << vMallEmployees[i].employeeId << endl;
         mallEmployeesFile << vMallEmployees[i].shopId << endl;
         mallEmployeesFile << vMallEmployees[i].supervisorEmployeeId << endl;
-        mallEmployeesFile << vMallEmployees[i].category << endl;
-        mallEmployeesFile << vMallEmployees[i].type << endl;
+        mallEmployeesFile << vMallEmployees[i].empcategory << endl;
+        mallEmployeesFile << vMallEmployees[i].emptype << endl;
         mallEmployeesFile << vMallEmployees[i].dateOfJoining.day << endl;
         mallEmployeesFile << vMallEmployees[i].dateOfJoining.month << endl;
         mallEmployeesFile << vMallEmployees[i].dateOfJoining.year << endl;
-        mallEmployeesFile << vMallEmployees[i].category << endl;
         mallEmployeesFile << vMallEmployees[i].salaryAccount.bankName << endl;
         mallEmployeesFile << vMallEmployees[i].salaryAccount.accountNumber << endl;
         mallEmployeesFile << vMallEmployees[i].salaryAccount.ifsc << endl;
-        mallEmployeesFile << vMallEmployees[i].salaryAccount.UAN << endl;
-        mallEmployeesFile << vMallEmployees[i].salaryAccount.salary << endl;
+        mallEmployeesFile << vMallEmployees[i].UAN << endl;
+        mallEmployeesFile << vMallEmployees[i].salary << endl;
         mallEmployeesFile << vMallEmployees[i].temp << endl;
         mallEmployeesFile << endl;
     }
@@ -258,15 +257,15 @@ void saveDatabase(vector<payment> &vPayments) {
         paymentsFile << vPayments[i].paymentID << endl;
         paymentsFile << vPayments[i].paymentFrom << endl;
         paymentsFile << vPayments[i].description << endl;
-        paymentsFile << vPayments[i].transaction.amount << endl;
-        paymentsFile << vPayments[i].transaction.trxnDate.day << endl;
-        paymentsFile << vPayments[i].transaction.trxnDate.month << endl;
-        paymentsFile << vPayments[i].transaction.trxnDate.year << endl;
-        paymentsFile << vPayments[i].transaction.trxnTime.hour << endl;
-        paymentsFile << vPayments[i].transaction.trxnTime.minute << endl;
-        paymentsFile << vPayments[i].transaction.trxnTime.second << endl;
-        paymentsFile << vPayments[i].transaction.type << endl;
-        paymentsFile << vPayments[i].transaction.referenceNumber << endl;
+        paymentsFile << vPayments[i].accTransaction.amount << endl;
+        paymentsFile << vPayments[i].accTransaction.trxnDate.day << endl;
+        paymentsFile << vPayments[i].accTransaction.trxnDate.month << endl;
+        paymentsFile << vPayments[i].accTransaction.trxnDate.year << endl;
+        paymentsFile << vPayments[i].accTransaction.trxnTime.hour << endl;
+        paymentsFile << vPayments[i].accTransaction.trxnTime.minute << endl;
+        paymentsFile << vPayments[i].accTransaction.trxnTime.second << endl;
+        paymentsFile << vPayments[i].accTransaction.type << endl;
+        paymentsFile << vPayments[i].accTransaction.referenceNumber << endl;
         paymentsFile << vPayments[i].paymentState << endl;
         paymentsFile << endl;
     }
@@ -286,7 +285,7 @@ void saveDatabase(mallBankAccount &mBankAccount) {
     mallBankAccountFile << mBankAccount.mallAccount.bankName << endl;
     mallBankAccountFile << mBankAccount.mallAccount.accountNumber << endl;
     mallBankAccountFile << mBankAccount.mallAccount.ifsc << endl;
-    mallBankAccountFile << mBankAccount.mallAccount.balance << endl;
+    mallBankAccountFile << mBankAccount.balance << endl;
 
     // Close database file
     mallBankAccountFile.close();

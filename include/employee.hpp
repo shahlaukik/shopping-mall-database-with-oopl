@@ -7,10 +7,8 @@
 class employee : public recognisedPerson {
     protected:
     int employeeId, shopId, supervisorEmployeeId;
-    enum category { parttime,
-                    fulltime } empcategory;
-    enum type { direct,
-                contracted } emptype;
+    category empcategory;
+    type emptype;
     struct date dateOfJoining;
 
     public:

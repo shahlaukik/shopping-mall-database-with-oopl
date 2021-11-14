@@ -42,7 +42,7 @@ enum typeOfTrxn {
     Out = 1,
 };
 
-enum trxnState { 
+enum trxnState {
     Pending = 0,
     Approved = 1,
     Rejected = 2,
@@ -55,6 +55,12 @@ struct transaction {
     typeOfTrxn type;
     string referenceNumber; // checkID or transferID
 };
+
+enum category { partTime = 0,
+                fullTime = 1 };
+
+enum type { direct = 0,
+            contracted = 1 };
 
 // functions for input and output of structs and enums
 address setAddress();
