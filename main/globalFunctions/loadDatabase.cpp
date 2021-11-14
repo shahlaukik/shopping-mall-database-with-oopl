@@ -15,7 +15,8 @@ void loadDatabase(vector<recognisedPerson> &vRecognisedPersons,
                   vector<mallEmployees> &vMallEmployees,
                   vector<transaction> &vTransactions,
                   vector<payout> &vPayouts,
-                  vector<payment> &vPayments) {
+                  vector<payment> &vPayments,
+                  mallBankAccount &acMall) {
 
     cout << "Hello from loadDatabase" << endl;
     loadDatabase(vRecognisedPersons);
