@@ -6,13 +6,13 @@ using namespace std;
 // Declare functions
 void loadDatabase(vector<recognisedPerson> &vRecognisedPersons);
 void loadDatabase(vector<recognisedOrganisation> &vRecognisedOrganisations);
-void loadDatabase(vector<shopDetails> &vShops){};
-void loadDatabase(vector<employee> &vEmployees){};
-void loadDatabase(vector<mallEmployees> &vMallEmployees){};
-void loadDatabase(vector<transaction> &vTransactions){};
-void loadDatabase(vector<payout> &vPayouts){};
-void loadDatabase(vector<payment> &vPayments){};
-void loadDatabase(mallBankAccount &acMall){};
+void loadDatabase(vector<shopDetails> &vShops);
+void loadDatabase(vector<employee> &vEmployees);
+void loadDatabase(vector<mallEmployees> &vMallEmployees);
+void loadDatabase(vector<transaction> &vTransactions);
+void loadDatabase(vector<payout> &vPayouts);
+void loadDatabase(vector<payment> &vPayments);
+void loadDatabase(mallBankAccount &acMall);
 
 void loadDatabase(vector<recognisedPerson> &vRecognisedPersons,
                   vector<recognisedOrganisation> &vRecognisedOrganisations,
