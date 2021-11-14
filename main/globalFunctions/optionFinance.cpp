@@ -9,6 +9,8 @@
 #include "../../include/payment.hpp"
 #include "../../include/payout.hpp"
 #include <iostream>
+#include <ios> //for <steamsize>
+#include <limits> //for numeric_limits
 #include <vector>
 
 void acceptPayment(mallBankAccount &acMall, vector<payment> vPayments) {
@@ -110,5 +112,12 @@ void optionFinance(mallBankAccount &acMall,
             cout << "Invalid choice. Please try again." << endl;
             break;
         }
+
+        // continue after user aknowledges
+        cout << "\n\nOperation successful" << endl;
+        cout << "Press any key to coutinue" << endl;
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cin.get();
     }
 }
