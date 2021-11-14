@@ -78,7 +78,11 @@ void paySalary(mallBankAccount &acMall, vector<mallEmployees> &vMallEmployees, v
     }
 }
 
-void optionFinance(mallBankAccount &acMall, vector<mallEmployees> &vMallEmployees, vector<transaction> &vTransactions) {
+void optionFinance(mallBankAccount &acMall,
+                   vector<mallEmployees> &vMallEmployees,
+                   vector<transaction> &vTransactions,
+                   vector<payout> &vPayouts,
+                   vector<payment> &vPayments) {
     int choice;
     cout << "\n1    :    ACCEPT PAYMENT"
          << "\n2    :    MAKE PAYOUT"

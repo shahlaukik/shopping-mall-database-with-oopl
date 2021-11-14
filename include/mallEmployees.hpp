@@ -27,5 +27,9 @@ class mallEmployees : public employee {
     bool paysalary();
     void setmallEMployee();
     void setEmployeeSalary(float Amount);
+
+    // declare store and load database as friend functions
+    friend void saveDatabase(vector<mallEmployees> &vMallEmployees);
+    friend void loadDatabase(vector<mallEmployees> &vMallEmployees);
 };
 #endif

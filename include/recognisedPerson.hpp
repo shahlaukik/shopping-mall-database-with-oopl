@@ -4,6 +4,7 @@
 
 #include "customDataTypes.hpp"
 #include <iostream>
+#include <vector>
 using namespace std;
 
 class recognisedPerson {
@@ -23,11 +24,15 @@ class recognisedPerson {
     /* functions to return each data member one at a time */
 
     int returnRecognisedPersonId(); // for ID
-    string returnName(); // for Name
-    date returnDate(); // for Date of Birth
-    string returnPhoneNumber(); // for Phone Number
-    string returnEmail(); // for Email
-    gender returnGender(); // for Gender
+    string returnName();            // for Name
+    date returnDate();              // for Date of Birth
+    string returnPhoneNumber();     // for Phone Number
+    string returnEmail();           // for Email
+    gender returnGender();          // for Gender
+
+    // declare store and load database as friend functions
+    friend void saveDatabase(vector<recognisedPerson> &vRecognisedPersons);
+    friend void loadDatabase(vector<recognisedPerson> &vRecognisedPersons);
 };
 
 #endif // RECOGNISEDPERSON_HPP
