@@ -31,12 +31,15 @@ int main() {
     while (repeat) {
         char choice;
         cout << "\n\n\nChoose action to perform: "
-             << "\n1. Add/Remove/Display Person"
-             << "\n2. Add/Remove/Display Organisation"
-             << "\n3. Add/Remove/Display Shop"
-             << "\n4. Add/Remove/Display Employee"
-             << "\n5. Add/Remove/Display Mall Employee"
-             << "\n6. Finance Related: ";
+             << "\n1    :   Add/Remove/Display Person"
+             << "\n2    :   Add/Remove/Display Organisation"
+             << "\n3    :   Add/Remove/Display Shop"
+             << "\n4    :   Add/Remove/Display Employee"
+             << "\n5    :   Add/Remove/Display Mall Employee"
+             << "\n6    :   Edit MallAccount Details"
+             << "\n7    :   Finance Related: "
+             << "\ne    :   EXIT"
+             << "\nENTER YOUR CHOICE: ";
         cin >> choice;
         switch (choice) {
         case '1':
@@ -55,6 +58,9 @@ int main() {
             optionMallEmployee(vMallEmployees);
             break;
         case '6':
+            acMall.accessMallBankAccount();
+            break;
+        case '7':
             optionFinance(acMall, vMallEmployees, vTransactions, vPayouts, vPayments);
             break;
         case 'e':
