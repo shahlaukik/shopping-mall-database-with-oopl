@@ -42,28 +42,26 @@ void mallBankAccount::accessMallBankAccount() {
                 << "\ne    :   EXIT"
                 << "\nENTER YOUR CHOICE: ";
             cin >> choice;
-        
-        switch (choice)
-        {
-        case '1':
+
             float amount;
-            cout << "\nEnter Amount to Deposit: ";
-            cin >> amount;
-            deposit(amount);
-            break;
-        case '2':
-            float amount;
-            cout << "\nEnter Amount to Withdraw: ";
-            cin >> amount;
-            deposit(amount);
-            break;
-        case 'e':
-            repeat = false;
-            break;
-        
-        default:
-            break;
-        }
+            switch (choice) {
+            case '1':
+                cout << "\nEnter Amount to Deposit: ";
+                cin >> amount;
+                deposit(amount);
+                break;
+            case '2':
+                cout << "\nEnter Amount to Withdraw: ";
+                cin >> amount;
+                deposit(amount);
+                break;
+            case 'e':
+                repeat = false;
+                break;
+
+            default:
+                break;
+            }
         }
     }
 }
