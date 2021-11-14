@@ -1,2 +1,5 @@
 #hide .vscode folder
 .vscode
+
+#dont upload database files
+main/database/*.txt

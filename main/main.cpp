@@ -69,7 +69,7 @@ int main() {
             cout << "Invalid choice. Please try again." << endl;
             break;
         }
-        system("cls");
+        // system("cls");
     }
 
     // exiting application
@@ -80,9 +80,9 @@ int main() {
     // Store to the database
     saveDatabase(vRecognisedPersons, vRecognisedOrganisations, vShopDetails, vEmployees, vMallEmployees,
                  vTransactions, vPayouts, vPayments, acMall);
-    cout << "\n\nFinished\nPress any key to exit" << endl;
 
     // exit after user aknowledges
+    cout << "\n\nFinished\nPress any key to exit" << endl;
     cin.clear();
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
     cin.get();

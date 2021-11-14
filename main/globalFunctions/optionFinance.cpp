@@ -8,8 +8,8 @@
 #include "../../include/mallEmployees.hpp"
 #include "../../include/payment.hpp"
 #include "../../include/payout.hpp"
-#include <ios> //for <steamsize>
 #include <iostream>
+#include <ios> //for <steamsize>
 #include <limits> //for numeric_limits
 #include <vector>
 
@@ -128,6 +128,13 @@ void optionFinance(mallBankAccount &acMall,
             cout << "Invalid choice. Please try again." << endl;
             break;
         }
+<<<<<<< HEAD
+
+        // continue after user aknowledges
+        cout << "\n\nOperation successful" << endl;
+        cout << "Press any key to coutinue" << endl;
+=======
+>>>>>>> 3154a949662e1e15aecffcb277261e398c03a164
         cin.clear();
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
         cin.get();
