@@ -11,12 +11,16 @@
 #include <iostream>
 #include <vector>
 
-void acceptPayment(mallBankAccount &acMall) {
-    acMall.deposit();
+void acceptPayment(mallBankAccount &acMall, vector<payment> vPayments) {
+    payment tempPayment;
+    tempPayment.acceptPayment(acMall);
+    vPayments.push_back(tempPayment);
 }
 
-void makePayout(mallBankAccount &acMall) {
-    acMall.withdraw();
+void makePayout(mallBankAccount &acMall, vector<payout> vPayouts) {
+    payout tempPayout;
+    tempPayout.setPayout();
+    vPayouts.push_back(tempPayout);
 }
 
 void paySalary(mallBankAccount &acMall, vector<mallEmployees> &vMallEmployees, vector<transaction> &vTransactions) {
@@ -29,29 +33,19 @@ void paySalary(mallBankAccount &acMall, vector<mallEmployees> &vMallEmployees, v
 
     switch (choice) {
     case 1: {
-        int amount;
+        float amount;
+        typeOfTrxn tempTOT = Out;
         cout << "\nEnter employees salary: ";
         cin >> amount;
 
-        int i = 0;
-        auto itTrxn = vTransactions.begin();
+        transaction tempTransaction;
         for (auto it = vMallEmployees.begin(); it != vMallEmployees.end(); it++) {
-            itTrxn->amount = amount;
-            itTrxn->referenceNumber = rand() % 10000;
-            itTrxn->trxnDate = getCurrentDate();
-            itTrxn->trxnTime = getCurrentTime();
-            itTrxn->type = Out;
-
-            acMall.balance -= amount;
             it->setEmployeeSalary(amount);
-
-            cout << "\n SALARY SUCCESSFULLY PAID TO " << it->returnEmployeeId()
-                 << endl;
-            getTransaction(vTransactions[i]);
-
-            itTrxn++;
-            i++;
+            tempTransaction = setTransaction(amount, Out);
+            acMall.withdraw(amount);
+            vTransactions.push_back(tempTransaction);
         }
+
         break;
     }
 
@@ -60,30 +54,18 @@ void paySalary(mallBankAccount &acMall, vector<mallEmployees> &vMallEmployees, v
         int tempId;
         cout << "\nEnter EmployeeId to pay salary: ";
         cin >> tempId;
-
+        transaction tempTransaction;
         int i = 0;
-        auto itTrxn = vTransactions.begin();
         for (auto it = vMallEmployees.begin(); it != vMallEmployees.end(); it++) {
             if (tempId == it->returnEmployeeId()) {
 
                 cout << "\nEnter employees salary: ";
                 cin >> amount;
 
-                itTrxn->amount = amount;
-                itTrxn->referenceNumber = rand() % 10000;
-                itTrxn->trxnDate = getCurrentDate();
-                itTrxn->trxnTime = getCurrentTime();
-                itTrxn->type = Out;
-
-                acMall.balance -= amount;
                 it->setEmployeeSalary(amount);
-
-                cout << "\n SALARY SUCCESSFULLY PAID TO " << it->returnEmployeeId()
-                     << endl;
-                getTransaction(vTransactions[i]);
-
-                itTrxn++;
-                i++;
+                tempTransaction = setTransaction(amount, Out);
+                acMall.withdraw(amount);
+                vTransactions.push_back(tempTransaction);
             }
         }
         break;

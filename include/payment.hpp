@@ -15,7 +15,7 @@ class payment {
     enum trxnState paymentState;
 
     public:
-    void acceptPayment(mallBankAccount mallAccount);
+    void acceptPayment(mallBankAccount &mallAccount);
 };
 
 #endif 
