@@ -6,8 +6,9 @@
 void recognisedPerson::setDetails() {
 
     cout << "\nENTER PERSON'S DETAILS:-"
-         << "\nEnter recognised Person's ID : ";
-    cin >> recognisedPersonId;
+         << "\nRecognised Person's ID : ";
+         recognisedPersonId = generateID();
+    cout << recognisedPersonId << endl;
 
     cout << "Enter recognised Person's Name: ";
     cin >> name;

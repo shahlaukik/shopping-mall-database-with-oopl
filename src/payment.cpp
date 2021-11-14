@@ -6,7 +6,7 @@
 #include <string.h>
 using namespace std;
 
-void payment::acceptPayment(mallBankAccount mallAccount) {
+void payment::acceptPayment(mallBankAccount &mallAccount) {
 
     int temp;
 
@@ -44,4 +44,5 @@ void payment::acceptPayment(mallBankAccount mallAccount) {
     cout << "Amount paid for: " << description;
     cout << "ChequeID/ReferenceID: " << accTransaction.referenceNumber;
     cout << "Amount Transferred: " << accTransaction.amount;
+    
 }
