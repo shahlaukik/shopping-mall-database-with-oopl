@@ -15,18 +15,21 @@ class employee : public recognisedPerson {
     void setemployeeId();
     void setShopId();
     void setSupervisorEmployeeId();
-    void setCategory();
-    void setType();
+
     void setEmployeeDetails(); //to
 
     void getemployeeId();
     void getShopId();
     void getSupervisorEmployeeId();
-    void getCategory();
-    void getType();
+
     void getDateOfJoining();
     void getEmployeeDetails();
     int returnEmployeeId();
+
+    void setEmpCategory();
+    void setEmpType();
+    category returnEmpCategory();
+    type returnEmpType();
 
     // declare store and load database as friend functions
     friend void saveDatabase(vector<employee> &vEmployees);

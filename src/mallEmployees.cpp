@@ -11,15 +11,6 @@ void mallEmployees::setUAN() {
     cin >> UAN;
 }
 
-//Function to take category
-void mallEmployees::setCategory() {
-    cout << "Employee is which category?\n";
-    cout << "1. Part Time\n2. Full time\n";
-    cout << "Choose: ";
-    cin >> temp;
-    (temp == 1) ? (empCategory = partTime) : (empCategory = fullTime);
-}
-
 //Function to take Bank detals
 void mallEmployees::setBankAccount() {
     cout << "Give the following Bank details: \n";
@@ -35,14 +26,10 @@ void mallEmployees::setBankAccount() {
 void mallEmployees::getEmployeeDetails() {
 
     cout << "The below are the details of the employee\n";
-    // putData();                        //Print data from Employee Class
+    getEmployeeDetails();             //Print data from Employee Class
     cout << "Additional Details: \n"; //Prints details from this class
     cout << "Employee Salary: " << salary;
     cout << "Employee UAN: " << UAN;
-    if (empCategory == partTime)
-        cout << "Category: Part Time\n";
-    else
-        cout << "Category: Full time\n";
 }
 
 //Function to print Employee salary
@@ -67,21 +54,6 @@ void mallEmployees::setmallEMployee() {
     setBankAccount();
 }
 
-//Function to process the salary of the employee
-bool mallEmployees::paysalary() {
-    cout << "The salary of the employee for this month is being processed\n";
-    cout << "The transaction ID is: " << rand();
-    return true;
-}
-
-//Function to take Salary
-void mallEmployees::setSalary() {
-
-    cout << "Give the salary: ";
-    cin >> salary;
-}
-
-void mallEmployees::setEmployeeSalary(float Amount)
-{
+void mallEmployees::setEmployeeSalary(float Amount) {
     salary = Amount;
 }
