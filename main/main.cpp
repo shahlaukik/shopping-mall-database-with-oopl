@@ -9,8 +9,6 @@ int main() {
     vector<shopDetails> vShopDetails;
     vector<employee> vEmployees;
     vector<mallEmployees> vMallEmployees;
-
-    // make store functons for theses vectors
     vector<transaction> vTransactions;
     vector<payout> vPayouts;
     vector<payment> vPayments;
@@ -24,7 +22,8 @@ int main() {
     cout << "\n\n\nPlease wait while loading database..." << endl;
 
     // Loading Database
-    loadDatabase(vRecognisedPersons, vRecognisedOrganisations, vShopDetails, vEmployees, vMallEmployees);
+    loadDatabase(vRecognisedPersons, vRecognisedOrganisations, vShopDetails,
+                 vEmployees, vMallEmployees, vTransactions, vPayouts, vPayments, acMall);
     bool repeat = true;
 
     // Show options to user
@@ -73,7 +72,8 @@ int main() {
     cout << "Please wait ..." << endl;
 
     // Store to the database
-    saveDatabase(vRecognisedPersons, vRecognisedOrganisations, vShopDetails, vEmployees, vMallEmployees);
+    saveDatabase(vRecognisedPersons, vRecognisedOrganisations, vShopDetails, vEmployees, vMallEmployees,
+                 vTransactions, vPayouts, vPayments, acMall);
     cout << "\n\nFinished\nPress any key to exit" << endl;
 
     // exit after user aknowledges

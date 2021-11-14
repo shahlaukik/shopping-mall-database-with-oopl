@@ -4,6 +4,7 @@
 
 #include "./customDataTypes.hpp"
 #include "./employee.hpp"
+#include <vector>
 #include "string"
 
 class mallEmployees : public employee {

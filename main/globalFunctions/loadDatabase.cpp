@@ -12,7 +12,10 @@ void loadDatabase(vector<recognisedPerson> &vRecognisedPersons,
                   vector<recognisedOrganisation> &vRecognisedOrganisations,
                   vector<shopDetails> &vShops,
                   vector<employee> &vEmployees,
-                  vector<mallEmployees> &vMallEmployees) {
+                  vector<mallEmployees> &vMallEmployees,
+                  vector<transaction> &vTransactions,
+                  vector<payout> &vPayouts,
+                  vector<payment> &vPayments) {
 
     cout << "Hello from loadDatabase" << endl;
     loadDatabase(vRecognisedPersons);

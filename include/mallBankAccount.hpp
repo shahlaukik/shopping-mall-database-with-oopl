@@ -2,6 +2,7 @@
 #ifndef MALLBANKACCOUNT_HPP
 #define MALLBANKACCOUNT_HPP
 #include "./customDataTypes.hpp"
+#include <vector>
 
 class mallBankAccount {
     private:
@@ -12,5 +13,9 @@ class mallBankAccount {
     bool withdraw(float amount);
     void deposit(float amount);
     float getBalance();
+
+    // declare store and load database as friend functions
+    friend void saveDatabase(mallBankAccount &mBankAccount);
+    friend void loadDatabase(mallBankAccount &mBankAccount);
 };
 #endif
