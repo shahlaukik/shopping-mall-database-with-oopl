@@ -19,17 +19,6 @@ void payment::acceptPayment(mallBankAccount &mallAccount) {
     cin >> description;
     accTransaction.trxnDate = getCurrentDate();
     accTransaction.trxnTime = getCurrentTime();
-    cout << " choose Mode of transer\n1. Cheque\n2. Transfer\nChoose:  ";
-    cin >> temp;
-
-    do {
-        if (temp == 1)
-            cout << "Enter the cheque ID: ";
-        else if (temp == 2)
-            cout << "Enter Transfer Reference ID";
-        else
-            cout << "Given Number is Invalid";
-    } while ((temp != 1) || (temp != 2));
 
     cin >> accTransaction.referenceNumber;
     accTransaction.type = In; //In/Out trxn type
