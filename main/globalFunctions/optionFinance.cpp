@@ -83,10 +83,32 @@ void optionFinance(mallBankAccount &acMall,
                    vector<transaction> &vTransactions,
                    vector<payout> &vPayouts,
                    vector<payment> &vPayments) {
-    int choice;
-    cout << "\n1    :    ACCEPT PAYMENT"
-         << "\n2    :    MAKE PAYOUT"
-         << "\n3    :    PAY SALARY"
-         << "\nENTER YOUR CHOICE: ";
-    cin >> choice;
+    bool repeat = true;
+    while (repeat) {
+        char choice;
+        cout << "\n1    :    ACCEPT PAYMENT"
+             << "\n2    :    MAKE PAYOUT"
+             << "\n3    :    PAY SALARY"
+             << "\ne    :    EXIT"
+             << "\nENTER YOUR CHOICE: ";
+        cin >> choice;
+
+        switch (choice) {
+        case '1':
+            acceptPayment(acMall, vPayments);
+            break;
+        case '2':
+            makePayout(acMall, vPayouts);
+            break;
+        case '3':
+            paySalary(acMall, vMallEmployees, vTransactions);
+            break;
+        case 'e':
+            repeat = false;
+            break;
+        default:
+            cout << "Invalid choice. Please try again." << endl;
+            break;
+        }
+    }
 }

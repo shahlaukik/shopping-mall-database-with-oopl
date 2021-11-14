@@ -13,6 +13,7 @@ class mallBankAccount {
     bool withdraw(float amount);
     void deposit(float amount);
     float getBalance();
+    void accessMallBankAccount();
 
     // declare store and load database as friend functions
     friend void saveDatabase(mallBankAccount &mBankAccount);
