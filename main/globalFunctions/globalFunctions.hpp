@@ -9,12 +9,20 @@ void saveDatabase(vector<recognisedPerson> &vRecognisedPersons,
                   vector<recognisedOrganisation> &vRecognisedOrganisations,
                   vector<shopDetails> &vShops,
                   vector<employee> &vEmployees,
-                  vector<mallEmployees> &vMallEmployees);
+                  vector<mallEmployees> &vMallEmployees,
+                  vector<transaction> &vTransactions,
+                  vector<payout> &vPayouts,
+                  vector<payment> &vPayments,
+                  mallBankAccount &acMall);
 void loadDatabase(vector<recognisedPerson> &vRecognisedPersons,
                   vector<recognisedOrganisation> &vRecognisedOrganisations,
                   vector<shopDetails> &vShops,
                   vector<employee> &vEmployees,
-                  vector<mallEmployees> &vMallEmployees);
+                  vector<mallEmployees> &vMallEmployees,
+                  vector<transaction> &vTransactions,
+                  vector<payout> &vPayouts,
+                  vector<payment> &vPayments,
+                  mallBankAccount &acMall);
 
 // Functions to give choices to user
 void optionPerson(vector<recognisedPerson> &vRecognisedPersons);

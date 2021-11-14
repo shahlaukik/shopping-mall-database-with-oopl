@@ -18,7 +18,7 @@ void employee::setCategory() {
     int temp;
     cout << "Choose: ";
     cin >> temp;
-    (temp == 1) ? (empcategory = parttime) : (empcategory = fulltime);
+    (temp == 1) ? (empcategory = partTime) : (empcategory = fullTime);
 }
 void employee::setType() {
     cout << "Enter the Employee type:\n";
@@ -36,7 +36,7 @@ void employee::getemployeeId() {
 
 }
 void employee::getCategory() {
-    if (empcategory == parttime)
+    if (empcategory == partTime)
         cout << "Category: Part Time\n";
     else
         cout << "Category: Full time\n";

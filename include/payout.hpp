@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include "../include/mallBankAccount.hpp"
+#include <vector>
 using namespace std;
 
 class payout {
@@ -26,6 +27,10 @@ class payout {
     struct transaction returnTransaction();
     string returnDescription();
     enum trxnState returnTrxnState();
+
+    // declare store and load database as friend functions
+    friend void saveDatabase(vector<payout> &vPayouts);
+    friend void loadDatabase(vector<payout> &vPayouts);
 };
 
 #endif // PAYOUT_HPP

@@ -4,12 +4,12 @@
 
 #include "./customDataTypes.hpp"
 #include "./employee.hpp"
+#include <vector>
 #include "string"
 
 class mallEmployees : public employee {
     protected:
-    enum category { partTime,
-                    fullTime } empCategory;
+    category empCategory;
     struct bankAccount salaryAccount;
     string UAN;
     float salary;

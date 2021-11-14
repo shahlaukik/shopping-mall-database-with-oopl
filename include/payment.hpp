@@ -5,6 +5,7 @@
 #include "./customDataTypes.hpp"
 #include "./mallBankAccount.hpp"
 #include "string"
+#include <vector>
 
 class payment {
     protected:
@@ -16,6 +17,10 @@ class payment {
 
     public:
     void acceptPayment(mallBankAccount &mallAccount);
+
+    // declare store and load database as friend functions
+    friend void saveDatabase(vector<payment> &vPayments);
+    friend void loadDatabase(vector<payment> &vPayments);
 };
 
-#endif 
+#endif
