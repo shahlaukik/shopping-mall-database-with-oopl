@@ -4,13 +4,13 @@
 #include "./customDataTypes.hpp"
 
 class mallBankAccount {
-    protected:
-    public:
+    private:
     struct bankAccount mallAccount;
     mallBankAccount(float balance);
     float balance;
-    void withdraw();
-    void deposit();
+    public:
+    bool withdraw(float amount);
+    void deposit(float amount);
     float getBalance();
 };
 #endif

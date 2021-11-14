@@ -5,9 +5,11 @@
 
 void recognisedOrganisation::setDetails() {
 
-    cout << "\nENTER ORGANISATION'S DETAILS:-"
-         << "\nEnter Organisation's ID : ";
-    cin >> recognisedOrganisationId;
+    cout << "\nENTER ORGANISATION'S DETAILS:-" << endl;
+
+    cout << "Organisation's ID: ";
+    recognisedOrganisationId = generateID();
+    cout << recognisedOrganisationId << endl;
 
     cout << "Enter Organisation's Name: ";
     cin >> registeredName;
@@ -21,8 +23,9 @@ void recognisedOrganisation::setDetails() {
     cout << "Enter emailId: ";
     cin >> emailId;
 
-    cout << "Enter registrationId: ";
-    cin >> registrationId;
+    cout << "RegistrationId: ";
+    registrationId = generateID();
+    cout << registrationId << endl;
 
     cout << "Enter GST Number: ";
     cin >> gstn;

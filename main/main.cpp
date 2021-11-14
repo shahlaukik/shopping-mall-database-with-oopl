@@ -9,6 +9,7 @@ int main() {
     vector<shopDetails> vShopDetails;
     vector<employee> vEmployees;
     vector<mallEmployees> vMallEmployees;
+    vector<transaction>vTransactions;
 
     // Welcome message
     cout << "\nWelcome to shopping mall management system!" << endl;
@@ -47,8 +48,8 @@ int main() {
             optionMallEmployee(vMallEmployees);
             break;
         case '6':
-            // optionFinance();
-            // break;
+            void optionFinance(acMall, vMallEmployees,vTransactions);
+            break;
         case 'e':
             repeat = false;
             break;

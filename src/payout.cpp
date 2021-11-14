@@ -47,21 +47,16 @@ bool payout::checkPayout(mallBankAccount *acMall) {
     cout << "\nEnter Amount to transfer: ";
     cin >> paybleAmount;
 
-    if ((int)paybleAmount < (int)(*acMall).balance) {
-        (*acMall).balance = (*acMall).balance - paybleAmount;
-
+    if (acMall->withdraw(paybleAmount)) {
         cout << endl
              << paybleAmount << " IS SUCCESSFULLY TRANSFERED.";
-    
         return true;
+        
     } else {
         cout << endl
              << "YOU DON'T HAVE REQUIRED AMMOUNT TO PAY ! ";
         return false;
     }
-    acMall->withdraw();
-
-    return false;
 }
 
 // Functions to return details if required

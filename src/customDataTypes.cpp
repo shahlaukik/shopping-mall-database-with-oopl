@@ -173,6 +173,16 @@ transaction setTransaction() {
     transaction.type = setTypeOfTrxn();
     return transaction;
 }
+// Overloaded function of setTransaction();
+transaction setTransaction(float tempAmount, typeOfTrxn tempTypeOfTrxn) {
+    transaction transaction;
+    transaction.trxnDate = getCurrentDate();
+    transaction.trxnTime = getCurrentTime();
+    transaction.amount = tempAmount;
+    transaction.type = tempTypeOfTrxn;
+    return transaction;
+}
+
 // Function to print transaction details
 void getTransaction(transaction transaction) {
     cout << "Transaction details:" << endl;
