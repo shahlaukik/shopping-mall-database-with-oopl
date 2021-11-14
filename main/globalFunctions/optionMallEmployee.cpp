@@ -70,5 +70,39 @@ void displayPerson(vector<mallEmployees> &vecMallEmployees) {
 }
 
 void optionMallEmployee(vector<mallEmployees> &vMallEmployees) {
-    // add code here
+    bool repeat = true;
+    while (repeat)
+    {
+        char choice;
+        cout 
+            << "\n1    :   ADD EMPLOYEE"
+            << "\n2    :   REMOVE EMPLOYEE"
+            << "\n3    :   DISPLAY EMPLOYEE"
+            << "\ne    :   EXIT"
+            << "\nENTER YOUR CHOICE: ";
+        cin >> choice;
+
+        switch (choice)
+        {
+        case '1':
+            addMallPerson(vMallEmployees);
+            break;
+        
+        case '2':
+            removeMallPerson(vMallEmployees);
+            break;
+    
+        case '3':
+            displayPerson(vMallEmployees);
+            break;
+
+        case 'e':
+            repeat = false;
+            break;
+
+        default:
+            break;
+        }
+    }
+    
 }

@@ -12,5 +12,6 @@ class mallBankAccount {
     bool withdraw(float amount);
     void deposit(float amount);
     float getBalance();
+    void accessMallBankAccount();
 };
 #endif
