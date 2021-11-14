@@ -31,7 +31,7 @@ class employee : public recognisedPerson {
     int returnEmployeeId();
 
     // declare store and load database as friend functions
-    friend void saveDatabase(vector<shopDetails> &vShops);
-    friend void loadDatabase(vector<shopDetails> &vShops);
+    friend void saveDatabase(vector<employee> &vEmployees);
+    friend void loadDatabase(vector<employee> &vEmployees);
 };
 #endif

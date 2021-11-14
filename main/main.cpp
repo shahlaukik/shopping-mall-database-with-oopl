@@ -9,7 +9,14 @@ int main() {
     vector<shopDetails> vShopDetails;
     vector<employee> vEmployees;
     vector<mallEmployees> vMallEmployees;
-    vector<transaction>vTransactions;
+
+    // make store functons for theses vectors
+    vector<transaction> vTransactions;
+    vector<payout> vPayouts;
+    vector<payment> vPayments;
+
+    // initiate mall bank account
+    mallBankAccount acMall(0);
 
     // Welcome message
     cout << "\nWelcome to shopping mall management system!" << endl;
@@ -48,7 +55,7 @@ int main() {
             optionMallEmployee(vMallEmployees);
             break;
         case '6':
-            void optionFinance(acMall, vMallEmployees,vTransactions);
+            optionFinance(acMall, vMallEmployees, vTransactions, vPayouts, vPayments);
             break;
         case 'e':
             repeat = false;

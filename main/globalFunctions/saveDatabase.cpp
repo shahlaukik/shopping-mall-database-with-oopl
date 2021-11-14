@@ -5,9 +5,9 @@ using namespace std;
 // Declare functions
 void saveDatabase(vector<recognisedPerson> &vRecognisedPersons);
 void saveDatabase(vector<recognisedOrganisation> &vRecognisedOrganisations);
-void saveDatabase(vector<shopDetails> &vShops);
-void saveDatabase(vector<employee> &vEmployees);
-void saveDatabase(vector<mallEmployees> &vMallEmployees);
+void saveDatabase(vector<shopDetails> &vShops){};
+void saveDatabase(vector<employee> &vEmployees){};
+void saveDatabase(vector<mallEmployees> &vMallEmployees){};
 
 void saveDatabase(vector<recognisedPerson> &vRecognisedPersons,
                   vector<recognisedOrganisation> &vRecognisedOrganisations,
