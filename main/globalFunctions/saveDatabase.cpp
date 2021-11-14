@@ -29,6 +29,10 @@ void saveDatabase(vector<recognisedPerson> &vRecognisedPersons,
     saveDatabase(vShops);
     saveDatabase(vEmployees);
     saveDatabase(vMallEmployees);
+    saveDatabase(vTransactions);
+    saveDatabase(vPayouts);
+    saveDatabase(vPayments);
+    saveDatabase(acMall);
 }
 
 // Function to save recognised persons to database file
