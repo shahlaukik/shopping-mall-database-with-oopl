@@ -3,6 +3,7 @@
 #define EMPLOYEE_HPP
 #include "./customDataTypes.hpp"
 #include "./recognisedPerson.hpp"
+#include <vector>
 class employee : public recognisedPerson {
     protected:
     int employeeId, shopId, supervisorEmployeeId;
@@ -18,8 +19,8 @@ class employee : public recognisedPerson {
     void setSupervisorEmployeeId();
     void setCategory();
     void setType();
-    void setEmployeeDetails(); //to 
-    
+    void setEmployeeDetails(); //to
+
     void getemployeeId();
     void getShopId();
     void getSupervisorEmployeeId();
@@ -28,6 +29,9 @@ class employee : public recognisedPerson {
     void getDateOfJoining();
     void getEmployeeDetails();
     int returnEmployeeId();
-    
+
+    // declare store and load database as friend functions
+    friend void saveDatabase(vector<shopDetails> &vShops);
+    friend void loadDatabase(vector<shopDetails> &vShops);
 };
 #endif

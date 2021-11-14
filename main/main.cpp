@@ -24,7 +24,7 @@ int main() {
         char choice;
         cout << "\n\n\nChoose action to perform: "
              << "\n1. Add/Remove/Display Person"
-             << "\n2. nAdd/Remove/Display Organisation"
+             << "\n2. Add/Remove/Display Organisation"
              << "\n3. Add/Remove/Display Shop"
              << "\n4. Add/Remove/Display Employee"
              << "\n5. Add/Remove/Display Mall Employee"

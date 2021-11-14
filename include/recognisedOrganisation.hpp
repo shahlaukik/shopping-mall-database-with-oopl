@@ -4,6 +4,7 @@
 
 #include "customDataTypes.hpp"
 #include <iostream>
+#include <vector>
 using namespace std;
 
 class recognisedOrganisation {
@@ -33,6 +34,10 @@ class recognisedOrganisation {
     string returnEmailId(); // for Email 
     int returnRegistrationId(); // for registration ID
     string returnGstn(); // for GST Number
+
+    // declare store and load database as friend functions
+    friend void saveDatabase(vector<recognisedOrganisation> &vRecognisedOrganisations);
+    friend void loadDatabase(vector<recognisedOrganisation> &vRecognisedOrganisations);
 };
 
 #endif // RECOGNISEDORGANISATION_HPP

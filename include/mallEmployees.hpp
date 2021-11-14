@@ -26,5 +26,9 @@ class mallEmployees : public employee {
     void getBankDetails();
     bool paysalary();
     void setmallEMployee();
+
+    // declare store and load database as friend functions
+    friend void saveDatabase(vector<mallEmployees> &vMallEmployees);
+    friend void loadDatabase(vector<mallEmployees> &vMallEmployees);
 };
 #endif
