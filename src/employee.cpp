@@ -12,47 +12,21 @@ void employee::setShopId() {
 void employee::setSupervisorEmployeeId() {
     supervisorEmployeeId = generateID();
 }
-void employee::setCategory() {
-    cout << "Employee is which category?\n";
-    cout << "1. Part Time\n2. Full time\n";
-    int temp;
-    cout << "Choose: ";
-    cin >> temp;
-    (temp == 1) ? (empcategory = partTime) : (empcategory = fullTime);
-}
-void employee::setType() {
-    cout << "Enter the Employee type:\n";
-    cout << "1. Direct\n2. Contracted\n";
-    int temp;
-    cout << "Choose: ";
-    cin >> temp;
-    (temp == 1) ? (emptype = direct) : (emptype = contracted);
-}
+
 void employee::getDateOfJoining() {
     cout << " The date of joining is :" << dateOfJoining.day << "/" << dateOfJoining.month << "/" << dateOfJoining.year << endl;
 }
 void employee::getemployeeId() {
     cout << "The employee Id is :" << employeeId << endl;
+}
 
-}
-void employee::getCategory() {
-    if (empcategory == partTime)
-        cout << "Category: Part Time\n";
-    else
-        cout << "Category: Full time\n";
-}
 void employee::getShopId() {
     cout << "The Shop ID is :" << shopId << endl;
 }
 void employee::getSupervisorEmployeeId() {
     cout << " The Supervisor Employee id is : " << supervisorEmployeeId << endl;
 }
-void employee::getType() {
-    if (emptype == direct)
-        cout << "Type : Direct\n";
-    else
-        cout << "Type : Contracted\n";
-}
+
 void employee::setEmployeeDetails() {
     cout << "Enter the Employee details :\n";
     setemployeeId();
@@ -67,11 +41,26 @@ void employee::getEmployeeDetails() {
     getemployeeId();
     getShopId();
     getSupervisorEmployeeId();
-    getCategory();
-    getType();
     getDateOfJoining();
+    getType(emptype);
+    getCategory(empcategory);
 }
 
 int employee::returnEmployeeId() {
     return employeeId;
+}
+
+void employee::setEmpCategory() {
+    empcategory = setCategory();
+}
+void employee::setEmpType() {
+    emptype = setType();
+}
+
+type employee::returnEmpType() {
+    return emptype;
+}
+
+category employee::returnEmpCategory() {
+    return empcategory;
 }
