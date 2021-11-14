@@ -1,10 +1,13 @@
 #include "../../include/mallEmployees.hpp"
 #include "../../include/recognisedPerson.hpp"
+#include <ios> //for <steamsize>
 #include <iostream>
+#include <limits> //for numeric_limits
 #include <vector>
 using namespace std;
 
 void addMallPerson(vector<mallEmployees> &vecMallEmployees) {
+    system("cls");
     mallEmployees newEmployee;
     newEmployee.setDetails();
     newEmployee.setEmployeeDetails();
@@ -12,7 +15,7 @@ void addMallPerson(vector<mallEmployees> &vecMallEmployees) {
 }
 
 bool removeMallPerson(vector<mallEmployees> &vecMallEmployees) {
-
+    system("cls");
     int inputId;
     cout << endl
          << "Enter Person's ID: ";
@@ -32,49 +35,63 @@ bool removeMallPerson(vector<mallEmployees> &vecMallEmployees) {
 }
 
 void displayPerson(vector<mallEmployees> &vecMallEmployees) {
-    int choice;
-    cout << endl
-         << "\n1    :   SEARCH BY ID"
-         << "\n2    :   DISPLAY ALL"
-         << "\nENTER YOUR CHOICE: ";
-    cin >> choice;
+    system("cls");
+    bool repeat = true;
+    while (repeat) {
+        char choice;
+        cout << endl
+             << "\n1    :   SEARCH BY ID"
+             << "\n2    :   DISPLAY ALL"
+             << "\ne    :   EXIT"
+             << "\nENTER YOUR CHOICE: ";
+        cin >> choice;
 
-    switch (choice) {
-    case 1: {
-        int input;
-        cout << "\nEnter ID to display Person:- ";
-        cin >> input;
+        switch (choice) {
+        case '1': {
+            int input;
+            cout << "\nEnter ID to display Person:- ";
+            cin >> input;
 
-        for (auto it = vecMallEmployees.begin(); it != vecMallEmployees.end(); it++) {
-            int tempId = it->returnEmployeeId(); //Takes ID from Employee Class
+            for (auto it = vecMallEmployees.begin(); it != vecMallEmployees.end(); it++) {
+                int tempId = it->returnEmployeeId(); //Takes ID from Employee Class
 
-            if (tempId == input) {
-                it->getDetails();
-                break;
+                if (tempId == input) {
+                    it->getDetails();
+                    break;
+                }
             }
         }
-    }
 
-    case 2: {
-        for (auto it = vecMallEmployees.begin(); it != vecMallEmployees.end(); it++) {
-            it->employee::getEmployeeDetails(); //get details from Employee Class
-            it->mallEmployees::getEmployeeDetails();
-            cout << endl;
+        case '2': {
+            for (auto it = vecMallEmployees.begin(); it != vecMallEmployees.end(); it++) {
+                it->employee::getEmployeeDetails(); //get details from Employee Class
+                it->mallEmployees::getEmployeeDetails();
+                cout << endl;
+            }
+            break;
         }
-        break;
-    }
 
-    default:
-        break;
+        case 'e':
+            repeat = false;
+            break;
+
+        default:
+            cout << "\nIncorrect choice Try again !";
+            break;
+        }
+
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cin.get();
     }
 }
 
 void optionMallEmployee(vector<mallEmployees> &vMallEmployees) {
+    system("cls");
     bool repeat = true;
-    while (repeat)
-    {
+    while (repeat) {
         char choice;
-        cout 
+        cout
             << "\n1    :   ADD EMPLOYEE"
             << "\n2    :   REMOVE EMPLOYEE"
             << "\n3    :   DISPLAY EMPLOYEE"
@@ -82,16 +99,15 @@ void optionMallEmployee(vector<mallEmployees> &vMallEmployees) {
             << "\nENTER YOUR CHOICE: ";
         cin >> choice;
 
-        switch (choice)
-        {
+        switch (choice) {
         case '1':
             addMallPerson(vMallEmployees);
             break;
-        
+
         case '2':
             removeMallPerson(vMallEmployees);
             break;
-    
+
         case '3':
             displayPerson(vMallEmployees);
             break;
@@ -101,8 +117,12 @@ void optionMallEmployee(vector<mallEmployees> &vMallEmployees) {
             break;
 
         default:
+            cout << "\nIncorrect choice Try again !";
             break;
         }
+
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cin.get();
     }
-    
 }
