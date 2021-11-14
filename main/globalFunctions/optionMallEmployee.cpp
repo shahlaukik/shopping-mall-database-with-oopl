@@ -68,3 +68,7 @@ void displayPerson(vector<mallEmployees> &vecMallEmployees) {
         break;
     }
 }
+
+void optionMallEmployee(vector<mallEmployees> &vMallEmployees) {
+    // add code here
+}

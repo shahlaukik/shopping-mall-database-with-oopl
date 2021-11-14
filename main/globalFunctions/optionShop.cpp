@@ -80,7 +80,7 @@ void displayShopDetails(vector<shopDetails> &vShopDetails) {
 }
 
 
-void optionShopDetails(vector<shopDetails> &vShopDetails)
+void optionShop(vector<shopDetails> &vShopDetails)
 {
     int choice;
     cout << endl
