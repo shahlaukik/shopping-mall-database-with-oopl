@@ -32,6 +32,19 @@
   - MAKE PAYOUT
   - PAY SALARY
 
+## Installation Instructions
+
+**Step-1**. Open terminal in bin folder to store all objects file
+
+**Step-2**. Compile all cpp files in following folders: src, main and main/globalFunctions. To compile run:
+gcc -c "../src/*.cpp"
+gcc -c "../main/*.cpp"
+gcc -c "../main/globalFunctions/*.cpp"
+
+**Step-3**. Link the object files to make exe in main folder using command:
+g++ *.o -o "../main/main.exe"
+
+**Step-4**. Run main.exe
 ## Classes Implemented
 
 #### recognisedPerson
