@@ -4,7 +4,7 @@
 #ifndef MAIN_HPP
 #define MAIN_HPP
 
-// Header files to include
+// Prebuild header files to include
 #include <iostream>
 #include <vector>
 #include <ios> //for <steamsize>

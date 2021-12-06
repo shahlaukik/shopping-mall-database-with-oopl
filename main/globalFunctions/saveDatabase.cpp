@@ -1,4 +1,6 @@
 // Function to save database file
+
+// Include header file
 #include "../main.hpp"
 using namespace std;
 
@@ -13,6 +15,7 @@ void saveDatabase(vector<payout> &vPayouts);
 void saveDatabase(vector<payment> &vPayments);
 void saveDatabase(mallBankAccount &acMall);
 
+// Main function
 void saveDatabase(vector<recognisedPerson> &vRecognisedPersons,
                   vector<recognisedOrganisation> &vRecognisedOrganisations,
                   vector<shopDetails> &vShops,

@@ -1,6 +1,7 @@
 // Function to load database
+
+// Include header file
 #include "../main.hpp"
-#include <fstream>
 using namespace std;
 
 // Declare functions
@@ -14,6 +15,7 @@ void loadDatabase(vector<payout> &vPayouts);
 void loadDatabase(vector<payment> &vPayments);
 void loadDatabase(mallBankAccount &acMall);
 
+// Main function
 void loadDatabase(vector<recognisedPerson> &vRecognisedPersons,
                   vector<recognisedOrganisation> &vRecognisedOrganisations,
                   vector<shopDetails> &vShops,
@@ -42,15 +44,16 @@ void loadDatabase(vector<recognisedPerson> &vRecognisedPersons) {
     ifstream recognisedPersonsFile;
     recognisedPersonsFile.open("database/recognisedPersons.txt");
 
-    // Read recognised persons from database file
+    // Check if database file is opened successfully, give error message if not
     if (recognisedPersonsFile.is_open()) {
+        // Read recognised persons from database file while not at the end of file
         recognisedPerson recognisedPerson;
         string fileLine;
         while (!recognisedPersonsFile.eof()) {
             getline(recognisedPersonsFile, fileLine);
-            if (fileLine == "") {
+            // If the line is empty, skip it
+            if (fileLine == "")
                 break;
-            }
             recognisedPerson.recognisedPersonId = stoi(fileLine);
             getline(recognisedPersonsFile, fileLine);
             recognisedPerson.name = fileLine;
@@ -75,6 +78,7 @@ void loadDatabase(vector<recognisedPerson> &vRecognisedPersons) {
             getline(recognisedPersonsFile, fileLine);
             recognisedPerson.email = fileLine;
             getline(recognisedPersonsFile, fileLine);
+            // Check if we have finished parsing person
             if (fileLine == "") {
                 vRecognisedPersons.push_back(recognisedPerson);
             } else {
@@ -83,7 +87,7 @@ void loadDatabase(vector<recognisedPerson> &vRecognisedPersons) {
             }
         }
     } else {
-        cout << "Unable to open recognised persons database file" << endl;
+        cout << "Error: Unable to open recognised persons database file" << endl;
     }
 
     // Close database file
@@ -97,15 +101,16 @@ void loadDatabase(vector<recognisedOrganisation> &vRecognisedOrganisations) {
     ifstream recognisedOrganisationsFile;
     recognisedOrganisationsFile.open("database/recognisedOrganisations.txt");
 
-    // Read recognised organisations from database file
+    // Check if database file is opened successfully, give error message if not
     if (recognisedOrganisationsFile.is_open()) {
+        // Read recognised organisations from database file while not at the end of file
         recognisedOrganisation recognisedOrganisation;
         string fileLine;
         while (!recognisedOrganisationsFile.eof()) {
             getline(recognisedOrganisationsFile, fileLine);
-            if (fileLine == "") {
+            // If the line is empty, skip it
+            if (fileLine == "")
                 break;
-            }
             recognisedOrganisation.recognisedOrganisationId = stoi(fileLine);
             getline(recognisedOrganisationsFile, fileLine);
             recognisedOrganisation.registeredName = fileLine;
@@ -134,10 +139,10 @@ void loadDatabase(vector<recognisedOrganisation> &vRecognisedOrganisations) {
             recognisedOrganisation.emailId = fileLine;
             getline(recognisedOrganisationsFile, fileLine);
             recognisedOrganisation.registrationId = stoi(fileLine);
-            ;
             getline(recognisedOrganisationsFile, fileLine);
             recognisedOrganisation.gstn = fileLine;
             getline(recognisedOrganisationsFile, fileLine);
+            // Check if we have finished parsing organisation
             if (fileLine == "") {
                 vRecognisedOrganisations.push_back(recognisedOrganisation);
             } else {
@@ -146,7 +151,7 @@ void loadDatabase(vector<recognisedOrganisation> &vRecognisedOrganisations) {
             }
         }
     } else {
-        cout << "Unable to open recognised organisations database file" << endl;
+        cout << "Error: Unable to open recognised organisations database file" << endl;
     }
 
     // Close database file
@@ -160,15 +165,16 @@ void loadDatabase(vector<shopDetails> &vShops) {
     ifstream shopsFile;
     shopsFile.open("database/shops.txt");
 
-    // Read shops from database file
+    // Check if database file is opened successfully, give error message if not
     if (shopsFile.is_open()) {
+        // Read shops from database file while not at the end of file
         shopDetails shop;
         string fileLine;
         while (!shopsFile.eof()) {
             getline(shopsFile, fileLine);
-            if (fileLine == "") {
+            // If the line is empty, skip it
+            if (fileLine == "")
                 break;
-            }
             shop.shopID = stoi(fileLine);
             getline(shopsFile, fileLine);
             shop.propertyNumber = stoi(fileLine);
@@ -185,6 +191,7 @@ void loadDatabase(vector<shopDetails> &vShops) {
             getline(shopsFile, fileLine);
             shop.dateOfPurchase.year = stoi(fileLine);
             getline(shopsFile, fileLine);
+            // Check if we have finished parsing shop
             if (fileLine == "") {
                 vShops.push_back(shop);
             } else {
@@ -193,7 +200,7 @@ void loadDatabase(vector<shopDetails> &vShops) {
             }
         }
     } else {
-        cout << "Unable to open shops database file" << endl;
+        cout << "Error: Unable to open shops database file" << endl;
     }
 
     // Close database file
@@ -207,15 +214,16 @@ void loadDatabase(vector<employee> &vEmployees) {
     ifstream employeesFile;
     employeesFile.open("database/employees.txt");
 
-    // Read employees from database file
+    // Check if database file is opened successfully, give error message if not
     if (employeesFile.is_open()) {
+        // Read employees from database file while not at the end of file
         employee employee;
         string fileLine;
         while (!employeesFile.eof()) {
             getline(employeesFile, fileLine);
-            if (fileLine == "") {
+            // If the line is empty, skip it
+            if (fileLine == "")
                 break;
-            }
             employee.recognisedPersonId = stoi(fileLine);
             getline(employeesFile, fileLine);
             employee.name = fileLine;
@@ -256,6 +264,7 @@ void loadDatabase(vector<employee> &vEmployees) {
             getline(employeesFile, fileLine);
             employee.dateOfJoining.year = stoi(fileLine);
             getline(employeesFile, fileLine);
+            // Check if we have finished parsing employee
             if (fileLine == "") {
                 vEmployees.push_back(employee);
             } else {
@@ -264,7 +273,7 @@ void loadDatabase(vector<employee> &vEmployees) {
             }
         }
     } else {
-        cout << "Unable to open employees database file" << endl;
+        cout << "Error: Unable to open employees database file" << endl;
     }
 
     // Close database file
@@ -278,15 +287,16 @@ void loadDatabase(vector<mallEmployees> &vMallEmployees) {
     ifstream mallEmployeesFile;
     mallEmployeesFile.open("database/mallEmployees.txt");
 
-    // Read employees from database file
+    // Check if database file is opened successfully, give error message if not
     if (mallEmployeesFile.is_open()) {
+        // Read employees from database file while not at the end of file
         mallEmployees mallEmployee;
         string fileLine;
         while (!mallEmployeesFile.eof()) {
             getline(mallEmployeesFile, fileLine);
-            if (fileLine == "") {
+            // If the line is empty, skip it
+            if (fileLine == "")
                 break;
-            }
             mallEmployee.recognisedPersonId = stoi(fileLine);
             getline(mallEmployeesFile, fileLine);
             mallEmployee.name = fileLine;
@@ -339,6 +349,7 @@ void loadDatabase(vector<mallEmployees> &vMallEmployees) {
             getline(mallEmployeesFile, fileLine);
             mallEmployee.temp = stoi(fileLine);
             getline(mallEmployeesFile, fileLine);
+            // Check if we have finished parsing employee
             if (fileLine == "") {
                 vMallEmployees.push_back(mallEmployee);
             } else {
@@ -347,7 +358,7 @@ void loadDatabase(vector<mallEmployees> &vMallEmployees) {
             }
         }
     } else {
-        cout << "Unable to open mall employees database file" << endl;
+        cout << "Error: Unable to open mall employees database file" << endl;
     }
 
     // Close database file
@@ -361,15 +372,16 @@ void loadDatabase(vector<transaction> &vTransactions) {
     ifstream transactionsFile;
     transactionsFile.open("database/transactions.txt");
 
-    // Read transactions from database file
+    // Check if database file is opened successfully, give error message if not
     if (transactionsFile.is_open()) {
+        // Read transactions from database file while not at the end of file
         transaction transaction;
         string fileLine;
         while (!transactionsFile.eof()) {
             getline(transactionsFile, fileLine);
-            if (fileLine == "") {
+            // If the line is empty, skip it
+            if (fileLine == "")
                 break;
-            }
             transaction.amount = stof(fileLine);
             getline(transactionsFile, fileLine);
             transaction.trxnDate.day = stoi(fileLine);
@@ -389,6 +401,7 @@ void loadDatabase(vector<transaction> &vTransactions) {
             getline(transactionsFile, fileLine);
             transaction.referenceNumber = fileLine;
             getline(transactionsFile, fileLine);
+            // Check if we have finished parsing transaction
             if (fileLine == "") {
                 vTransactions.push_back(transaction);
             } else {
@@ -397,7 +410,7 @@ void loadDatabase(vector<transaction> &vTransactions) {
             }
         }
     } else {
-        cout << "Unable to open transactions database file" << endl;
+        cout << "Error: Unable to open transactions database file" << endl;
     }
 
     // Close database file
@@ -411,15 +424,16 @@ void loadDatabase(vector<payout> &vPayouts) {
     ifstream payoutsFile;
     payoutsFile.open("database/payouts.txt");
 
-    // Read payouts from database file
+    // Check if database file is opened successfully, give error message if not
     if (payoutsFile.is_open()) {
+        // Read payouts from database file while not at the end of file
         payout payout;
         string fileLine;
         while (!payoutsFile.eof()) {
             getline(payoutsFile, fileLine);
-            if (fileLine == "") {
+            // If the line is empty, skip it
+            if (fileLine == "")
                 break;
-            }
             payout.payoutId = stoi(fileLine);
             getline(payoutsFile, fileLine);
             payout.invoiceId = stoi(fileLine);
@@ -446,6 +460,7 @@ void loadDatabase(vector<payout> &vPayouts) {
             getline(payoutsFile, fileLine);
             payout.trxnState = static_cast<trxnState>(stoi(fileLine));
             getline(payoutsFile, fileLine);
+            // Check if we have finished parsing payout
             if (fileLine == "") {
                 vPayouts.push_back(payout);
             } else {
@@ -454,7 +469,7 @@ void loadDatabase(vector<payout> &vPayouts) {
             }
         }
     } else {
-        cout << "Unable to open payouts database file" << endl;
+        cout << "Error: Unable to open payouts database file" << endl;
     }
 
     // Close database file
@@ -468,15 +483,16 @@ void loadDatabase(vector<payment> &vPayments) {
     ifstream paymentsFile;
     paymentsFile.open("database/payments.txt");
 
-    // Read payments from database file
+    // Check if database file is opened successfully, give error message if not
     if (paymentsFile.is_open()) {
+        // Read payments from database file while not at the end of file
         payment payment;
         string fileLine;
         while (!paymentsFile.eof()) {
             getline(paymentsFile, fileLine);
-            if (fileLine == "") {
+            // If the line is empty, skip it
+            if (fileLine == "")
                 break;
-            }
             payment.paymentID = stoi(fileLine);
             getline(paymentsFile, fileLine);
             payment.paymentFrom = fileLine;
@@ -503,6 +519,7 @@ void loadDatabase(vector<payment> &vPayments) {
             getline(paymentsFile, fileLine);
             payment.paymentState = static_cast<trxnState>(stoi(fileLine));
             getline(paymentsFile, fileLine);
+            // Check if we have finished parsing payment
             if (fileLine == "") {
                 vPayments.push_back(payment);
             } else {
@@ -511,7 +528,7 @@ void loadDatabase(vector<payment> &vPayments) {
             }
         }
     } else {
-        cout << "Unable to open payments database file" << endl;
+        cout << "Error: Unable to open payments database file" << endl;
     }
 
     // Close database file
@@ -525,7 +542,7 @@ void loadDatabase(mallBankAccount &mBankAccount) {
     ifstream mBankAccountFile;
     mBankAccountFile.open("database/mallBankAccount.txt");
 
-    // Read mall bank account from database file
+    // Read mall bank account from database file while not at the end of file
     if (mBankAccountFile.is_open() && !mBankAccountFile.eof()) {
         string fileLine;
         getline(mBankAccountFile, fileLine);
@@ -544,7 +561,7 @@ void loadDatabase(mallBankAccount &mBankAccount) {
             exit(1);
         }
     } else {
-        cout << "Unable to open mall bank account database file" << endl;
+        cout << "Error: Unable to open mall bank account database file" << endl;
     }
 
     // Close database file

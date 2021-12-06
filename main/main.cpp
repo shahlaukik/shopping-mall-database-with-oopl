@@ -13,7 +13,7 @@ int main() {
     vector<payout> vPayouts;
     vector<payment> vPayments;
 
-    // initiate mall bank account
+    // Initiate mall bank account
     mallBankAccount acMall(0);
 
     // Welcome message
@@ -24,21 +24,21 @@ int main() {
     // Loading Database
     loadDatabase(vRecognisedPersons, vRecognisedOrganisations, vShopDetails,
                  vEmployees, vMallEmployees, vTransactions, vPayouts, vPayments, acMall);
-    bool repeat = true;
 
-    // Show options to user
+    // Show options to user and call respective function
+    bool repeat = true;
     while (repeat) {
         char choice;
         cout << "\n\n\nChoose action to perform: "
-             << "\n1    :   Add/Remove/Display Person"
-             << "\n2    :   Add/Remove/Display Organisation"
-             << "\n3    :   Add/Remove/Display Shop"
-             << "\n4    :   Add/Remove/Display Employee"
-             << "\n5    :   Add/Remove/Display Mall Employee"
-             << "\n6    :   Edit MallAccount Details"
-             << "\n7    :   Finance Related: "
-             << "\ne    :   EXIT"
-             << "\nENTER YOUR CHOICE: ";
+             << "\n1. Add/Remove/Display Person"
+             << "\n2. Add/Remove/Display Organisation"
+             << "\n3. Add/Remove/Display Shop"
+             << "\n4. Add/Remove/Display Employee"
+             << "\n5. Add/Remove/Display Mall Employee"
+             << "\n6. Edit MallAccount Details"
+             << "\n7. Finance Related: "
+             << "\ne. EXIT"
+             << "\nSelect option: ";
         cin >> choice;
         switch (choice) {
         case '1':
@@ -69,19 +69,17 @@ int main() {
             cout << "Invalid choice. Please try again." << endl;
             break;
         }
-        // system("cls");
     }
 
-    // exiting application
+    // Exiting application
     cout << "\n\n\nExiting application..." << endl;
-    cout << "Saving changes to database" << endl;
-    cout << "Please wait ..." << endl;
+    cout << "Saving changes to database, Please wait ..." << endl;
 
     // Store to the database
     saveDatabase(vRecognisedPersons, vRecognisedOrganisations, vShopDetails, vEmployees, vMallEmployees,
                  vTransactions, vPayouts, vPayments, acMall);
 
-    // exit after user aknowledges
+    // Exit after user aknowledges
     cout << "\n\nFinished\nPress any key to exit" << endl;
     cin.clear();
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
