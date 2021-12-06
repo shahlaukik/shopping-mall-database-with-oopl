@@ -85,7 +85,7 @@ trxnState setTrxnState();
 void getTrxnState(trxnState trxnState);
 
 transaction setTransaction();
-transaction setTransaction(float tempAmount, typeOfTrxn tempTypeOfTrxn);
+transaction setTransaction(float tempAmount, typeOfTrxn tempTypeOfTrxn); // Function Override
 void getTransaction(transaction transaction);
 
 // Functions to get current date and time

@@ -1,22 +1,32 @@
 #include "../include/payout.hpp"
 #include "../include/customDataTypes.hpp"
+#include "../include/mallBankAccount.hpp"
 #include <string>
 
 // function to input initial values
 
-void payout::setPayout() {
+void payout::setPayout(mallBankAccount &acMall) {
+    float tempAmount ;
     cout << endl
          << "ENTER PAYOUT DETAILS:-"
          << endl
          << "Enter Invoice No.:  ";
     cin >> invoiceId;
-
-    transaction = setTransaction();
+    cout << endl
+         << "Enter Amount: ";
+    cin >> tempAmount;
+    if(tempAmount >= acMall.getBalance()){ 
+    transaction = setTransaction(tempAmount, Out);
 
     cout << "Enter Description:  ";
     cin >> description;
-
     trxnState = setTrxnState();
+    }
+    else
+    {
+        cout << endl
+             << "!! Your Balance ammount is not sufficent !!";
+    }
 }
 
 // Function to out details

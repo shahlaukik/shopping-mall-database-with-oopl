@@ -35,7 +35,7 @@ void mallBankAccount::accessMallBankAccount() {
         cout << "\nlogin Successfull";
         bool repeat = true;
         char choice;
-        while (choice) {
+        while(repeat) {
             cout
                 << "\n1    :   DEPOSIT"
                 << "\n2    :   WITHDRAW"
