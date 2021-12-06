@@ -23,7 +23,7 @@ void acceptPayment(mallBankAccount &acMall, vector<payment> vPayments) {
 void makePayout(mallBankAccount &acMall, vector<payout> vPayouts) {
     system("cls");
     payout tempPayout;
-    tempPayout.setPayout();
+    tempPayout.setPayout(acMall);
     vPayouts.push_back(tempPayout);
 }
 
@@ -46,7 +46,6 @@ void paySalary(mallBankAccount &acMall, vector<mallEmployees> &vMallEmployees, v
             typeOfTrxn tempTOT = Out;
             cout << "\nEnter employees salary: ";
             cin >> amount;
-
             transaction tempTransaction;
             for (auto it = vMallEmployees.begin(); it != vMallEmployees.end(); it++) {
                 it->setEmployeeSalary(amount);
@@ -89,9 +88,9 @@ void paySalary(mallBankAccount &acMall, vector<mallEmployees> &vMallEmployees, v
             break;
         }
 
-        cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        cin.get();
+        // cin.clear();
+        // cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        // cin.get();
     }
 }
 

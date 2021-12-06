@@ -16,7 +16,7 @@ class payout {
     trxnState trxnState;
 
     public:
-    void setPayout(); // take input of all details at once
+    void setPayout(mallBankAccount &acMall); // take input of all details at once
     void getPayout(); // give output of all details at once
     bool checkPayout(mallBankAccount *acMall);
 
