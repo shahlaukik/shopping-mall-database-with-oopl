@@ -2,12 +2,11 @@
 #include <string>
 
 // setDatail function of recognisedPerson Class to input all detail at once
-
 void recognisedPerson::setDetails() {
 
     cout << "\nENTER PERSON'S DETAILS:-"
          << "\nRecognised Person's ID : ";
-         recognisedPersonId = generateID();
+    recognisedPersonId = generateID();
     cout << recognisedPersonId << endl;
 
     cout << "Enter recognised Person's Name: ";
@@ -27,7 +26,6 @@ void recognisedPerson::setDetails() {
 }
 
 // getDetails function of recognisedPerson Class to Display all details at once
-
 void recognisedPerson::getDetails() {
     cout << endl
          << "PERSON'S DETAILS:-"
@@ -51,7 +49,6 @@ void recognisedPerson::getDetails() {
 }
 
 // functions to return each data member one at a time
-
 int recognisedPerson::returnRecognisedPersonId() {
     return recognisedPersonId;
 }

@@ -56,7 +56,7 @@ void displayPerson(vector<mallEmployees> &vecMallEmployees) {
                 int tempId = it->returnEmployeeId(); //Takes ID from Employee Class
 
                 if (tempId == input) {
-                    it->getDetails();
+                    it->mallEmployees::getEmployeeDetails();
                     break;
                 }
             }
@@ -64,7 +64,6 @@ void displayPerson(vector<mallEmployees> &vecMallEmployees) {
 
         case '2': {
             for (auto it = vecMallEmployees.begin(); it != vecMallEmployees.end(); it++) {
-                it->employee::getEmployeeDetails(); //get details from Employee Class
                 it->mallEmployees::getEmployeeDetails();
                 cout << endl;
             }

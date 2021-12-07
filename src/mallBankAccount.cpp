@@ -35,7 +35,7 @@ void mallBankAccount::accessMallBankAccount() {
         cout << "\nlogin Successfull";
         bool repeat = true;
         char choice;
-        while(repeat) {
+        while (repeat) {
             cout
                 << "\n1    :   DEPOSIT"
                 << "\n2    :   WITHDRAW"
@@ -53,7 +53,10 @@ void mallBankAccount::accessMallBankAccount() {
             case '2':
                 cout << "\nEnter Amount to Withdraw: ";
                 cin >> amount;
-                deposit(amount);
+                if (withdraw(amount))
+                    cout << "\nWithdraw Successful";
+                else
+                    cout << "\nWithdraw Unsuccessful";
                 break;
             case 'e':
                 repeat = false;

@@ -1,3 +1,6 @@
+// This file handles operations related to persons
+
+// Include header files
 #include "../../include/recognisedPerson.hpp"
 #include <iostream>
 #include <vector>
@@ -16,7 +19,7 @@ bool removePerson(vector<recognisedPerson> &recognisedPersons) {
     system("cls");
     int inputId;
     cout << endl
-         << "Enter Person's ID: ";
+         << "Enter Person's ID to be removed: ";
     cin >> inputId;
 
     for (auto it = recognisedPersons.begin(); it != recognisedPersons.end(); it++) {
@@ -26,7 +29,6 @@ bool removePerson(vector<recognisedPerson> &recognisedPersons) {
                  << (*it).returnName() << " is removed.";
             recognisedPersons.erase(it);
             return true;
-            break;
         }
     }
     return false;
@@ -38,16 +40,17 @@ void displayPerson(vector<recognisedPerson> &recognisedPersons) {
     while (repeat) {
         char choice;
         cout << endl
-             << "\n1    :   SEARCH BY ID"
-             << "\n2    :   DISPLAY ALL"
-             << "\ne   :   EXIT"
-             << "\nENTER YOUR CHOICE: ";
+             << "\n1. Display by ID"
+             << "\n2. Display all persons"
+             << "\ne. Exit"
+             << "\nSelect option: ";
         cin >> choice;
 
+        bool temp = false;
         switch (choice) {
         case '1': {
             int input;
-            cout << "\nEnter ID to display Person:- ";
+            cout << "\nEnter ID to display Person: ";
             cin >> input;
 
             for (auto it = recognisedPersons.begin(); it != recognisedPersons.end(); it++) {
@@ -55,8 +58,12 @@ void displayPerson(vector<recognisedPerson> &recognisedPersons) {
 
                 if (tempId == input) {
                     it->getDetails();
+                    temp = true;
                     break;
                 }
+            }
+            if (!temp) {
+                cout << "\nNo person found with ID: " << input;
             }
             break;
         }
@@ -74,6 +81,7 @@ void displayPerson(vector<recognisedPerson> &recognisedPersons) {
             break;
             
         default:
+        cout << "Invalid choice. Please try again.";
             break;
         }
         cin.clear();
@@ -89,11 +97,11 @@ void optionPerson(vector<recognisedPerson> &recognisedPersons) {
     while (repeat) {
         char choice;
         cout << endl
-             << "\n1   :   ADD PERSON"
-             << "\n2   :   REMOVE PERSON"
-             << "\n3   :   DISPLAY PERSON-DETAILS"
-             << "\ne   :   EXIT"
-             << "\nENTER YOUR CHOICE: ";
+             << "\n1. Add Person"
+             << "\n2. Remove Person"
+             << "\n3. Display Person"
+             << "\ne. Exit"
+             << "\nSelect option: ";
         cin >> choice;
 
         switch (choice) {
@@ -114,7 +122,7 @@ void optionPerson(vector<recognisedPerson> &recognisedPersons) {
             break;
 
         default:
-            cout << "\nIncorrect choice Try again !";
+            cout << "Invalid choice. Please try again.";
             break;
         }
         cin.clear();

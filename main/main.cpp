@@ -37,7 +37,7 @@ int main() {
              << "\n5. Add/Remove/Display Mall Employee"
              << "\n6. Edit MallAccount Details"
              << "\n7. Finance Related: "
-             << "\ne. EXIT"
+             << "\ne. Exit"
              << "\nSelect option: ";
         cin >> choice;
         switch (choice) {

@@ -1,3 +1,6 @@
+// This file handles operations related to organisations
+
+// include header files
 #include "../../include/recognisedOrganisation.hpp"
 #include <ios> //for <steamsize>
 #include <iostream>
@@ -6,7 +9,6 @@
 using namespace std;
 
 // Function to Add Organisation details
-
 void addOrganisation(vector<recognisedOrganisation> &recognisedOrganisations) {
     system("cls");
     recognisedOrganisation newOrganisation;
@@ -19,7 +21,7 @@ bool removeOrganisation(vector<recognisedOrganisation> &recognisedOrganisations)
     system("cls");
     int inputId;
     cout << endl
-         << "Enter Organisation's ID: ";
+         << "Enter Organisation's ID to be removed: ";
     cin >> inputId;
 
     for (auto it = recognisedOrganisations.begin(); it != recognisedOrganisations.end(); it++) {
@@ -37,7 +39,6 @@ bool removeOrganisation(vector<recognisedOrganisation> &recognisedOrganisations)
 }
 
 // Function to Display details
-
 void displayOrganisation(vector<recognisedOrganisation> &recognisedOrganisations) {
     system("cls");
     bool repeat = true;
