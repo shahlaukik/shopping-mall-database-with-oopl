@@ -49,9 +49,9 @@ void displayShopDetails(vector<shopDetails> &vShopDetails) {
     while (repeat) {
         char choice;
         cout << endl
-             << "\n1    :   SEARCH BY SHOP ID"
-             << "\n2    :   DISPLAY ALL"
-             << "\ne   :   EXIT"
+             << "\n1. SEARCH BY SHOP ID"
+             << "\n2. DISPLAY ALL"
+             << "\ne. EXIT"
              << "\nENTER YOUR CHOICE: ";
         cin >> choice;
 
@@ -96,10 +96,10 @@ void optionShop(vector<shopDetails> &vShopDetails) {
     while (repeat) {
         char choice;
         cout << endl
-             << "\n1   :   ADD A SHOP"
-             << "\n2   :   REMOVE A SHOP"
-             << "\n3   :   DISPLAY SHOP DETAILS"
-             << "\ne   :   EXIT"
+             << "\n1. ADD A SHOP"
+             << "\n2. REMOVE A SHOP"
+             << "\n3. DISPLAY SHOP DETAILS"
+             << "\ne. EXIT"
              << "ENTER YOUR CHOICE: ";
         cin >> choice;
 

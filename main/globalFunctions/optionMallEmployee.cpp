@@ -40,9 +40,9 @@ void displayPerson(vector<mallEmployees> &vecMallEmployees) {
     while (repeat) {
         char choice;
         cout << endl
-             << "\n1    :   SEARCH BY ID"
-             << "\n2    :   DISPLAY ALL"
-             << "\ne    :   EXIT"
+             << "\n1. SEARCH BY ID"
+             << "\n2. DISPLAY ALL"
+             << "\ne. EXIT"
              << "\nENTER YOUR CHOICE: ";
         cin >> choice;
 
@@ -92,10 +92,10 @@ void optionMallEmployee(vector<mallEmployees> &vMallEmployees) {
     while (repeat) {
         char choice;
         cout
-            << "\n1    :   ADD EMPLOYEE"
-            << "\n2    :   REMOVE EMPLOYEE"
-            << "\n3    :   DISPLAY EMPLOYEE"
-            << "\ne    :   EXIT"
+            << "\n1. ADD EMPLOYEE"
+            << "\n2. REMOVE EMPLOYEE"
+            << "\n3. DISPLAY EMPLOYEE"
+            << "\ne. EXIT"
             << "\nENTER YOUR CHOICE: ";
         cin >> choice;
 
