@@ -9,7 +9,7 @@ mallBankAccount::mallBankAccount(float Balance) {
 }
 
 bool mallBankAccount::withdraw(float amount) {
-    if (balance < amount) {
+    if (balance >= amount) {
         balance -= amount;
         return true;
     } else {
@@ -39,6 +39,7 @@ void mallBankAccount::accessMallBankAccount() {
             cout
                 << "\n1    :   DEPOSIT"
                 << "\n2    :   WITHDRAW"
+                << "\n3    :   CHECK BALANCE"
                 << "\ne    :   EXIT"
                 << "\nENTER YOUR CHOICE: ";
             cin >> choice;
@@ -57,6 +58,9 @@ void mallBankAccount::accessMallBankAccount() {
                     cout << "\nWithdraw Successful";
                 else
                     cout << "\nWithdraw Unsuccessful";
+                break;
+            case '3':
+                cout << "\nYour Balance is: " << getBalance();
                 break;
             case 'e':
                 repeat = false;

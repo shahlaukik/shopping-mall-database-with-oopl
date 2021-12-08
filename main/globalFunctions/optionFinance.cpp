@@ -128,9 +128,6 @@ void optionFinance(mallBankAccount &acMall,
             break;
         }
 
-        // continue after user aknowledges
-        cout << "\n\nOperation successful" << endl;
-        cout << "Press any key to coutinue" << endl;
         cin.clear();
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
         cin.get();

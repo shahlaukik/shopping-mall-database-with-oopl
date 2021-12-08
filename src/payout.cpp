@@ -15,12 +15,12 @@ void payout::setPayout(mallBankAccount &acMall) {
     cout << endl
          << "Enter Amount: ";
     cin >> tempAmount;
-    if(tempAmount >= acMall.getBalance()){ 
+    if(tempAmount <= acMall.getBalance()){ 
     transaction = setTransaction(tempAmount, Out);
-
     cout << "Enter Description:  ";
     cin >> description;
-    trxnState = setTrxnState();
+    cout << "Transaction Successful" << endl;
+    acMall.withdraw(tempAmount);
     }
     else
     {
